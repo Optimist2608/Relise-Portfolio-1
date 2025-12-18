@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 30px;
+}
+body {
+    padding: 50px 50px;
+    background-color: rgba(196, 194, 195, 0.616);
+}
+.head {
+    margin:20px 0px;
+}
+.hr {
+    border: 1px solid rgb(68, 68, 68);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.main {
+    margin-top: 10px;
+    margin-bottom: 10px ;
+}
+.main2 {
+    margin-top: 10px;
+    margin-bottom: 10px ;
+}
+.fot_p {
+    margin-top: 10px;
+    margin-bottom: 10px ;
+}
+.s_m {
+    color: blue;
+    font-size: 15px;
+}
+a { 
+    padding: 10px 5px;
+    background-color:rgba(158, 157, 157, 0.616);
+    border: 1px solid black;
+    color: black;
+    font-style: normal;
+    text-decoration: none;
+}

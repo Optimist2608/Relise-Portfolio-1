@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'MPLUS-bold';
+    src:
+    url('/fonts/MPLUS1Code-Bold.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Bold.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-medium';
+    src:
+    url('/fonts/MPLUS1Code-Medium.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Medium.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-regular';
+    src:
+    url('/fonts/MPLUS1Code-Regular.woff2') format('woff2'),
+    url('fonts/MPLUS1Code-Regular.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-thin';
+    src:
+    url('/fonts/MPLUS1Code-Thin.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Thin.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    font-family: 'MPLUS-regular';
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color: rgb(223, 245, 255);
+}
+.page {
+    max-width: 1400px;
+    background-color: rgb(211, 236, 216);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 150px;
+}
+/*
+ █████   █████ ██████████   █████████   ██████████  
+▒▒███   ▒▒███ ▒▒███▒▒▒▒▒█  ███▒▒▒▒▒███ ▒▒███▒▒▒▒███ 
+ ▒███    ▒███  ▒███  █ ▒  ▒███    ▒███  ▒███   ▒▒███
+ ▒███████████  ▒██████    ▒███████████  ▒███    ▒███
+ ▒███▒▒▒▒▒███  ▒███▒▒█    ▒███▒▒▒▒▒███  ▒███    ▒███
+ ▒███    ▒███  ▒███ ▒   █ ▒███    ▒███  ▒███    ███ 
+ █████   █████ ██████████ █████   █████ ██████████  
+▒▒▒▒▒   ▒▒▒▒▒ ▒▒▒▒▒▒▒▒▒▒ ▒▒▒▒▒   ▒▒▒▒▒ ▒▒▒▒▒▒▒▒▒▒   
+*/
+h1 {
+    text-align: left;
+}
+h1::after {
+    content: "😆"
+}
+.left, .right {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(146, 1, 98);
+    border: 2px solid black;
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+    text-align: center;
+    padding-top: 90px;
+    font-size: 25px;
+    z-index: 2;
+}
+.left {
+    padding-left:80px;
+}
+.right {
+    right: 10px;
+}
+.all:hover .left {
+    animation: left 2s 0.2s both linear;
+}
+.all:hover .right {
+    animation: right 2s 0.2s both linear;
+}
+/* .left:hover  {
+    animation: left 2s 0.2s both linear;
+}
+.right:hover {
+    animation: right 2s 0.2s both linear;
+} */
+.dp {
+    position: relative;
+    top: -120px;
+    left: 150px;
+    font-size: 32px;
+    z-index: 1;
+}
+.dp pre::after {
+    content: "🤣";
+}
+p {
+    margin: 0;
+}
+@keyframes left {
+  0% {
+    -webkit-transform: perspective(700px) translateX(0) translateZ(0) rotateY(0);
+            transform:perspective(700px) translateX(0) translateZ(0) rotateY(0);
+    -webkit-transform-origin: center right;
+            transform-origin: center right;
+  }
+  100% {
+    -webkit-transform:perspective(700px) translateX(-150px) translateZ(130px) rotateY(90deg);
+            transform:perspective(700px) translateX(-150px) translateZ(130px) rotateY(90deg);
+    -webkit-transform-origin: center right;
+            transform-origin: center right;
+  }
+}
+@keyframes right {
+  0% {
+    -webkit-transform:perspective(700px) translateX(0) translateZ(0) rotateY(0);
+            transform:perspective(700px) translateX(0) translateZ(0) rotateY(0);
+    -webkit-transform-origin: center left;
+            transform-origin: center left;
+  }
+  100% {
+    -webkit-transform:perspective(700px) translateX(150px) translateZ(130px) rotateY(-90deg);
+            transform:perspective(700px) translateX(150px) translateZ(130px) rotateY(-90deg);
+    -webkit-transform-origin: center left;
+            transform-origin: center left;
+  }
+}

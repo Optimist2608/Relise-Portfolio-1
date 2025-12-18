@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'MPLUS-bold';
+    src:
+    url('/fonts/MPLUS1Code-Bold.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Bold.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-medium';
+    src:
+    url('/fonts/MPLUS1Code-Medium.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Medium.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-regular';
+    src:
+    url('/fonts/MPLUS1Code-Regular.woff2') format('woff2'),
+    url('fonts/MPLUS1Code-Regular.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-thin';
+    src:
+    url('/fonts/MPLUS1Code-Thin.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Thin.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    font-family: 'MPLUS-regular';
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(233, 233, 233);
+}
+.page {
+    max-width: 1400px;
+    background-color: rgb(221, 221, 221);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 150px;
+    position: relative;
+}
+.big_m {
+    border: 2px solid black;
+    display: block;
+    position:relative;
+    align-content:center;
+    text-align:center;
+    padding: 200px 300px;
+    position: relative;
+}
+
+.mini {
+    border: 2px solid black;
+    display: inline-block;
+    margin: 0px;
+    padding: 20px;
+    position: relative;
+    width: 176px;
+    height: 130px;
+    align-content: center;
+}
+.big_m {
+    /* background-image: url('./img/Ph1\ 256.png'); */
+    background-repeat: no-repeat ;
+    align-content: center;
+    background-position-x: center;
+    background-position-y: center;
+}
+h1{
+    position: relative;
+    text-align: center;
+    top: 45px;
+}
+.m1 {
+    background-image: url('./img/Ph1\ 128.png');
+    align-content: center;
+    background-repeat: no-repeat ;
+    position: relative;
+    background-position-x: center;
+    background-position-y: center;
+}
+.m2 {
+    background-image: url('./img/Ph2\ 128.png');
+    align-content: center;
+    background-repeat: no-repeat ;
+    position: relative;
+    background-position-x: center;
+    background-position-y: center;
+}
+.m3 {
+    background-image: url('./img/Ph3\ 128.png');
+    align-content: center;
+    background-repeat: no-repeat ;
+    position: relative;
+    background-position-x: center;
+    background-position-y: center;
+}
+.m4 {
+    background-image: url('./img/Ph4\ 128.png');
+    align-content: center;
+    background-repeat: no-repeat ;
+    position: relative;
+    background-position-x: center;
+    background-position-y: center;
+}
+.m5 {
+    background-image: url('./img/Ph5\ 128.png');
+    align-content: center;
+    background-repeat: no-repeat ;
+    position: relative;
+    background-position-x: center;
+    background-position-y: center;
+}
+.m6 {
+    background-image: url('./img/Ph6\ 128.png');
+    align-content: center;
+    background-repeat: no-repeat ;
+    position: relative;
+    background-position-x: center;
+    background-position-y: center;
+}
+.big_m:has(~  .m1:hover) {
+    background-image: url('./img/Ph1\ 256.png');
+    background-repeat: no-repeat ;
+    align-content: center;
+    background-position-x: center;
+    background-position-y: center;
+    transition: 0.3s;
+}
+.big_m:has(~  .m2:hover) {
+    background-image: url('./img/Ph2\ 256.png');
+    background-repeat: no-repeat ;
+    align-content: center;
+    background-position-x: center;
+    background-position-y: center;
+    transition: 0.3s;
+}
+.big_m:has(~  .m3:hover) {
+    background-image: url('./img/Ph3 256.png');
+    background-repeat: no-repeat ;
+    align-content: center;
+    background-position-x: center;
+    background-position-y: center;
+    transition: 0.3s;
+}
+.big_m:has(~  .m4:hover) {
+    background-image: url('./img/Ph4\ 256.png');
+    background-repeat: no-repeat ;
+    align-content: center;
+    background-position-x: center;
+    background-position-y: center;
+    transition: 0.3s;
+}
+.big_m:has(~  .m5:hover) {
+    background-image: url('./img/Ph5\ 256.png');
+    background-repeat: no-repeat ;
+    align-content: center;
+    background-position-x: center;
+    background-position-y: center;
+    transition: 0.3s;
+}
+.big_m:has(~  .m6:hover) {
+    background-image: url('./img/Ph6\ 256.png');
+    background-repeat: no-repeat ;
+    align-content: center;
+    background-position-x: center;
+    background-position-y: center;
+    transition: 0.3s;
+}

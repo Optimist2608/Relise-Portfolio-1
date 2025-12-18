@@ -1,0 +1,2566 @@
+/* style.css - СТРУКТУРНЫЕ стили (без цветов) */
+
+@font-face {
+    font-family: 'RobotoMono-Bold';
+    src: url('../fonts/RobotoMono-Bold.woff2') format('woff2'),
+         url('../fonts/RobotoMono-Bold.woff') format('woff'),
+         url('../fonts/RobotoMono-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('../fonts/Poppins-SemiBold.woff2') format('woff2'),
+         url('../fonts/Poppins-SemiBold.woff') format('woff'),
+         url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins-medium';
+    src: url('../fonts/Poppins-Medium.woff2') format('woff2'),
+         url('../fonts/Poppins-Medium.woff') format('woff'),
+         url('../fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins-regular';
+    src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
+         url('../fonts/Poppins-Regular.woff') format('woff'),
+         url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    font-family: 'Poppins-regular';
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    cursor: url('../img/cursors/cursor-default.png') 2 2, default;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========== MAIN WRAPPER ========== */
+.main-wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* ========== LEFT SIDEBAR ========== */
+.left-sidebar {
+    display: flex;
+    height: 100%;
+    width: auto;
+}
+
+.left_menu {
+    width: 38px;
+    height: 100%;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.left_menu_all_img {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 12px 0 0 10px;
+}
+
+.left_menu_img {
+    width: 18px;
+    height: 18px;
+    cursor: url('../img/cursors/cursor-pointer.png') 10 4, pointer !important;
+}
+
+/* Стили для переключателя тем */
+.theme-switcher-container {
+    position: relative;
+}
+
+.theme-switcher {
+    cursor: url('../img/cursors/cursor-pointer.png') 10 4, pointer !important;
+    transition: transform 0.2s, all 0.3s ease;
+    position: relative;
+    z-index: 100;
+}
+
+.theme-switcher:hover {
+    transform: scale(1.1);
+}
+
+.theme-dropdown {
+    position: absolute;
+    left: 45px;
+    top: 0;
+    width: 200px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+    overflow: hidden;
+    border: 1px solid;
+    animation: dropdownFadeIn 0.2s ease-out;
+}
+
+.theme-dropdown.show {
+    display: block !important;
+}
+
+.theme-option {
+    padding: 12px 15px;
+    cursor: url('../img/cursors/cursor-pointer.png') 10 4, pointer !important;
+    font-size: 13px;
+    font-family: 'Poppins-regular';
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid;
+}
+
+.theme-option:last-child {
+    border-bottom: none;
+}
+
+.theme-option:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.theme-icon.blue {
+    background: linear-gradient(135deg, #002451 50%, #1A304D 50%);
+}
+
+.theme-icon.white {
+    background: linear-gradient(135deg, #f8f9fa 50%, #e9f5e9 50%);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.theme-icon.dark {
+    background: linear-gradient(135deg, #0d1117 50%, #161b22 50%);
+}
+
+/* Левая навигация */
+.left_nav {
+    width: 329px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.left_nav_sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 10px;
+    border-bottom: 1px solid;
+    cursor: url('../img/cursors/cursor-default.png') 2 2, default;
+}
+
+#left_nav_h2 {
+    font-family: 'Poppins-medium';
+    font-size: 20px;
+    margin: 0;
+}
+
+#img_nav_top {
+    width: 32px;
+    height: 32px;
+    cursor: url('../img/cursors/cursor-pointer.png') 10 4, pointer !important;
+}
+
+.left_nav_main_sec {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-bottom: 1px solid;
+    cursor: url('../img/cursors/cursor-default.png') 2 2, default;
+}
+
+.a-d {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+    cursor: url('../img/cursors/cursor-default.png') 2 2, default;
+}
+
+.left_nav_h3 {
+    font-family: 'Poppins-regular';
+    font-size: 14px;
+    margin: 0;
+    flex-grow: 1;
+    cursor: url('../img/cursors/cursor-default.png') 2 2, default;
+}
+
+.left_nav_main_sec_all_img {
+    display: flex;
+    gap: 8px;
+}
+
+.left_nav_main_sec_img {
+    width: 16px;
+    height: 16px;
+    cursor: url('../img/cursors/cursor-pointer.png') 10 4, pointer !important;
+}
+
+.left_nav_ul {
+    list-style: none;
+    padding: 10px 10px 10px 40px;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.left_nav_ul li {
+    position: relative;
+    padding: 6px 0 6px 35px;
+    font-size: 13px;
+    cursor: url('../img/cursors/cursor-pointer.png') 10 4, pointer !important;
+    transition: all 0.2s ease;
+}
+
+.left_nav_ul li:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding-left: 38px;
+}
+
+.left_nav_ul li::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-image: url('../img/left_nav/arrow-right.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.left_nav_ul li:hover::before {
+    opacity: 0.8;
+}
+
+#sec2, #sec3 {
+    margin-top: auto;
+}
+
+/* ========== RIGHT CONTENT ========== */
+.right-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    position: relative;
+}
+
+.head_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 15px;
+    border-bottom: 1px solid;
+    width: 100%;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    max-width: calc(100% - 100px);
+}
+
+.tabs::-webkit-scrollbar {
+    height: 3px;
+}
+
+.tabs::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.tabs::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px 8px 10px;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid;
+    border-bottom: none;
+    margin-right: 2px;
+    cursor: url('../img/cursors/cursor-pointer.png') 10 4, pointer !important;
+    min-width: 120px;
+    max-width: 200px;
+    position: relative;
+}
+
+.tab.active {
+    z-index: 2;
+    border-bottom: 2px solid;
+}
+
+.tab h2 {
+    font-size: 12px;
+    font-family: 'Poppins-regular';
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    transition: color 0.5s ease;
+}
+
+.tab-icon {
+    width: 14px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+#tab1 {
+    width: 14px;
+    height: 16px;
+}
+
+#tab2, .close-tab {
+    width: 15px;
+    height: 15px;
+    cursor: url('../img/cursors/cursor-pointer.png') 10 4, pointer !important;
+    opacity: 0.7;
+    flex-shrink: 0;
+}
+
+.close-tab:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.header-icons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.header-icons img {
+    width: 20px;
+    height: 20px;
+    cursor: url('../img/cursors/cursor-pointer.png') 10 4, pointer !important;
+}
+
+/* ========== MAIN CONTENT ========== */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    min-height: 0; /* Важно для flexbox */
+}
+
+.main_nav {
+    height: 30px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid;
+    flex-shrink: 0;
+    width: 100%;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.path {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    font-size: 12px;
+    font-family: 'Poppins-regular';
+    width: 100%;
+    transition: color 0.5s ease;
+}
+
+.path li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-right: 15px;
+    margin-right: 5px;
+    height: 100%;
+}
+
+.path li:not(:last-child)::after {
+    content: '›';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.path li:last-child {
+    font-weight: 600;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.path li:last-child::after {
+    display: none;
+}
+
+.main_content {
+    flex: 1;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 0; /* Важно для flexbox */
+}
+
+.main_content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.code-editor {
+    border: 1px solid;
+    border-top: none;
+    overflow: hidden;
+    font-family: 'Poppins-regular';
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.code-editor.active {
+    display: block;
+}
+
+.code-container {
+    display: flex;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.line-numbers {
+    padding: 10px 8px;
+    text-align: right;
+    min-width: 50px;
+    border-right: 1px solid;
+    user-select: none;
+    font-family: 'RobotoMono-Bold', monospace;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-shrink: 0;
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+}
+
+.line-numbers span {
+    display: block;
+    line-height: 1.5;
+    padding-right: 10px;
+    min-height: 20px;
+}
+
+.text-content {
+    flex: 1;
+    padding: 20px 40px;
+    overflow-y: auto;
+    font-family: 'Poppins-regular';
+    font-size: 14px;
+    line-height: 1.6;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    max-width: 100%;
+    cursor: url('../img/cursors/cursor-text.png') 16 8, text;
+    transition: color 0.5s ease;
+}
+
+.text-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.text-content h1 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+}
+
+.text-content h2 {
+    font-size: 22px;
+    margin: 25px 0 15px;
+}
+
+.text-content h3 {
+    font-size: 18px;
+    margin: 20px 0 10px;
+}
+
+.text-content p {
+    margin-bottom: 15px;
+    padding: 5px 0;
+}
+
+.text-content ul {
+    margin-bottom: 15px;
+    padding-left: 25px;
+}
+
+.text-content li {
+    margin-bottom: 8px;
+}
+
+.text-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========== ФУТЕР (ВЫСОТА 200px) ========== */
+.footer {
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid;
+    width: 100%;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    background-color: inherit;
+    z-index: 10;
+}
+
+.footer.expanded {
+    height: 280px;
+}   
+.footer-tabs {
+    display: flex;
+    height: 35px;
+    border-bottom: 1px solid;
+    width: 100%;
+    flex-shrink: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.footer-tab {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: url('../img/cursors/cursor-pointer.png') 10 4, pointer !important;
+    border-right: 1px solid;
+    transition: background-color 0.2s;
+    flex-shrink: 0;
+}
+
+.footer-tab:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.footer-tab.active {
+    border-bottom: 2px solid;
+}
+
+.footer-tab-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: color 0.5s ease;
+}
+
+.footer-tab-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 10;
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    font-family: 'Poppins-regular';
+    font-size: 13px;
+    width: 100%;
+    min-height: 0;
+    transition: all 0.3s ease;
+    opacity: 0  ;
+    transform: translateY(-10px);
+    display: none;
+}
+
+.footer-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.footer-tab-content {
+        position: relative;
+    z-index: 11;
+
+    display: none;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.footer-tab-content.active {
+    display: block;
+}
+
+/* Стили для терминала */
+.terminal-output {
+    font-family: 'RobotoMono-Bold', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.terminal-line {
+    margin-bottom: 8px;
+}
+.footer.expanded .footer-content {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+}
+
+/* ========== КАСТОМНЫЕ КУРСОРЫ ========== */
+/* 2. КУРСОР-РУКА ДЛЯ КЛИКАБЕЛЬНЫХ ЭЛЕМЕНТОВ */
+a, button, 
+.theme-option,
+.menu-icon,
+[onclick], [data-clickable] {
+    cursor: url('../img/cursors/cursor-pointer.png') 10 4, pointer !important;
+}
+
+/* 3. ТЕКСТОВЫЙ КУРСОР */
+input, textarea, 
+.code-editor,
+.code-container, .line-numbers,
+[contenteditable="true"],
+.code-highlight, .selectable-text,
+pre, code {
+    cursor: url('../img/cursors/cursor-text.png') 16 8, text;
+}
+
+/* 4. СПЕЦИАЛЬНЫЕ СТАТУСЫ */
+.wait, .loading, [disabled] {
+    cursor: url('../img/cursors/cursor-default.png') 2 2, not-allowed;
+}
+
+/* 5. ДЛЯ ВАШЕГО ПОРТФОЛИО ОСОБЕННО */
+.cursor-animation-btn {
+    transition: all 0.3s ease;
+}
+
+.cursor-animation-btn:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.cursor-animation-btn.active:hover {
+    animation: pulse 1.5s infinite;
+}
+
+/* Стили для анимации курсора */
+#cursor-trail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+body.show-cursor-trail #cursor-trail {
+    opacity: 1;
+}
+
+/* ========== КНОПКА АНИМАЦИИ КУРСОРА В ЛЕВОМ МЕНЮ ========== */
+.cursor-animation-container {
+    position: relative;
+}
+
+.cursor-animation-btn::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: -2px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cursor-animation-btn.active::after {
+    opacity: 1;
+}
+
+.cursor-animation-btn.disabled::after {
+    background-color: #ff7b72;
+}
+
+.cursor-notification {
+    position: absolute;
+    left: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: 'Poppins-regular';
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.cursor-notification.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(5px);
+}
+
+/* Пустое состояние */
+.no-tab-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+}
+
+.empty-state h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.empty-state p {
+    font-size: 16px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Анимации */
+@keyframes tabSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.tab:not(:first-child) {
+    animation: tabSlideIn 0.3s ease-out;
+}
+
+/* Отступ для контента достижений */
+#achievements-content .text-content {
+    margin-left: 20px;
+    padding-left: 40px;
+    position: relative;
+}
+
+#achievements-content .text-content::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    border-radius: 3px;
+}
+
+.theme-dropdown-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 99;
+}
+
+.theme-dropdown-backdrop.active {
+    display: block;
+}
+
+/* Альтернативный вариант с обтеканием текста */
+.about-me-text-with-photo {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.about-me-photo-float {
+    float: right;
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin: 0 0 20px 20px;
+    transition: all 0.3s ease;
+}
+
+.about-me-photo-float:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.about-me-text::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* ========== СТИЛИ ДЛЯ РАЗДЕЛА ДОСТИЖЕНИЙ ========== */
+.achievements-container {
+    margin-bottom: 40px;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid;
+    transition: all 0.3s ease;
+}
+
+.achievement-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-content {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.achievement-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.achievement-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.achievement-details {
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.achievement-details p {
+    margin-bottom: 5px;
+}
+
+.achievement-link {
+    flex-shrink: 0;
+    width: 200px;
+    text-align: center;
+}
+
+.certificate-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.certificate-link:hover {
+    transform: scale(1.05);
+}
+
+.certificate-img {
+    width: 180px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.link-text {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.certificate-link:hover .link-text {
+    text-decoration: underline;
+}
+
+/* Дополнительные достижения */
+.additional-achievements {
+    margin: 30px 0 40px 20px;
+}
+
+.additional-achievements li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.additional-achievements li:before {
+    content: "✓";
+    position: absolute;
+    left: -20px;
+    font-weight: bold;
+}
+
+/* Статистика */
+.achievements-stats {
+    margin: 40px 0;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-3px);
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'RobotoMono-Bold', monospace;
+}
+
+.stat-label {
+    font-size: 14px;
+}
+
+/* Футер раздела */
+.achievements-footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px dashed;
+}
+
+.full-portfolio-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.full-portfolio-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ========== СТИЛИ ДЛЯ НОВОГО БЛОКА "ОБО МНЕ" ========== */
+.profession-title {
+    font-size: 20px;
+    margin-top: -5px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.about-me-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid;
+}
+
+.about-me-intro {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.about-me-intro p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.skills-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skill-badge {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid;
+    transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+    transform: translateY(-2px);
+}
+
+.about-me-photo-container {
+    flex-shrink: 0;
+    width: 250px;
+}
+
+.about-me-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.about-me-photo:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.current-learning {
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid;
+    margin: 25px 0;
+}
+
+.course-link {
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    padding-bottom: 2px;
+}
+
+.course-link:hover {
+    border-bottom-color: inherit;
+}
+
+.aviation-details {
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid;
+    margin: 20px 0 30px;
+}
+
+.aviation-details ul {
+    margin-left: 20px;
+}
+
+.aviation-details li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.aviation-details li:before {
+    content: "✈️";
+    position: absolute;
+    left: -25px;
+    top: 2px;
+}
+
+/* Секция наставника */
+.mentor-section {
+    margin: 40px 0;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.mentor-card {
+    margin-top: 20px;
+}
+
+.mentor-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid;
+}
+
+.mentor-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid;
+    margin-right: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.mentor-info {
+    flex: 1;
+}
+
+.mentor-name {
+    font-size: 20px;
+    text-decoration: none;
+    border-bottom: 2px solid;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+.mentor-name:hover {
+    border-bottom-color: inherit;
+}
+
+.mentor-role {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.mentor-period {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.mentor-skills {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.mentor-skills ul {
+    margin-left: 20px;
+}
+
+.mentor-skills li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.mentor-skills li:before {
+    content: "✓";
+    position: absolute;
+    left: -15px;
+    font-weight: bold;
+}
+
+.club-info {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 3px solid;
+}
+
+/* Спортивная временная линия */
+.sports-timeline {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+    position: relative;
+    padding-top: 60px;
+}
+
+.sports-timeline:before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    right: 50px;
+    height: 2px;
+    z-index: 1;
+}
+
+.sport-item {
+    flex: 1;
+    margin: 0 15px;
+    padding: 25px 20px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-top: 40px;
+}
+
+.sport-item:hover {
+    transform: translateY(-5px);
+}
+
+.sport-item.current {
+    border: 2px solid;
+}
+
+.sport-item:before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 3;
+    border: 3px solid;
+}
+
+.sport-item.current:before {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+.sport-period {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 4;
+}
+
+.sport-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.sport-name:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    border-radius: 1px;
+}
+
+.sport-item.current .sport-name:after {
+    width: 70px;
+}
+
+.sport-description {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.sport-item:after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    z-index: 2;
+}
+
+.sports-conclusion {
+    margin: 30px 0;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid;
+    font-style: italic;
+}
+
+.future-plans {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 30px 0 40px;
+}
+
+.plan-category {
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid;
+    transition: all 0.3s ease;
+}
+
+.plan-category:hover {
+    transform: translateY(-5px);
+}
+
+.plan-category h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+}
+
+.plan-category ul {
+    margin-left: 20px;
+}
+
+.plan-category li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.plan-category li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+}
+
+.personal-quote {
+    margin: 50px 0 30px;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid;
+}
+
+.personal-quote blockquote {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 0 15px 0;
+    border: none;
+    font-style: italic;
+}
+
+.quote-author {
+    text-align: right;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* ========== СТИЛИ ДЛЯ СИСТЕМЫ СКАЧИВАНИЯ ========== */
+.download-container {
+    padding: 20px;
+    max-height: 225px;
+    overflow-y: auto;
+}
+
+.download-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.download-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.download-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+}
+
+.download-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.download-header {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.download-description {
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.download-level-section {
+    margin-bottom: 25px;
+}
+
+.download-level-section:empty {
+    display: none;
+}
+
+.download-level-header {
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.download-counter {
+    font-size: 14px;
+    background-color: #002451;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-weight: normal;
+}
+
+.download-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.download-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 100%;
+}
+
+.download-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: #4ec9b0;
+}
+
+.download-card-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+.download-card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.download-card-content {
+    flex: 1;
+}
+/* тест */
+.download-card-content h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #9CDCFE;
+    line-height: 1.4;
+}
+
+.download-card-desc {
+    font-size: 13px;
+    color: #8F9BA6;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.download-card-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+
+
+.download-card-size {
+    font-size: 12px;
+    color: #8F9BA6;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.download-card-button {
+    margin-top: 15px;
+}
+
+.download-btn {
+    background-color: #4ec9b0;
+    color: #002451;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-family: 'Poppins-medium';
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #3fb095;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(78, 201, 176, 0.4);
+}
+
+.download-btn.loading {
+    position: relative;
+    color: transparent;
+}
+
+.download-btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #002451;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.download-btn-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(0);
+}
+
+.download-info, .download-instructions {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #4ec9b0;
+    font-size: 14px;
+}
+
+.download-info h4, .download-instructions h4 {
+    color: #9CDCFE;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.download-info ul, .download-instructions ol {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.download-info li, .download-instructions li {
+    color: #8F9BA6;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.download-info code, .download-instructions code {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #CE9178;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'RobotoMono-Bold', monospace;
+    font-size: 13px;
+}
+
+/* Уведомление о скачивании */
+.download-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #002451;
+    border: 1px solid #4ec9b0;
+    border-radius: 8px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.download-notification.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.download-notification-icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.download-notification span {
+    color: #fff6f6;
+    font-size: 14px;
+    flex: 1;
+}
+
+.download-notification-close {
+    background: none;
+    border: none;
+    color: #8F9BA6;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.download-notification-close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff6f6;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1200px) {
+    .text-content {
+        padding: 15px 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-me-header {
+        flex-direction: column;
+    }
+    
+    .about-me-intro {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .about-me-photo-container {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .sports-timeline {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+    }
+    
+    .sports-timeline:before {
+        display: none;
+    }
+    
+    .sport-item {
+        width: 100%;
+        max-width: 400px;
+        margin: 20px 0;
+    }
+    
+    .sport-item:before {
+        top: -30px;
+    }
+    
+    .sport-item:after {
+        height: 15px;
+        top: -15px;
+    }
+    
+    .sports-timeline {
+        position: relative;
+    }
+    
+    .sports-timeline:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    
+    .sport-item:before {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .sport-item:after {
+        display: none;
+    }
+    
+    .future-plans {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-content {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    
+    #cursor-trail {
+        display: none;
+    }
+    
+    .theme-switcher-container:hover .theme-dropdown {
+        display: none;
+    }
+    
+    .theme-switcher-container .theme-dropdown {
+        position: fixed;
+        left: 50px;
+        top: 40px;
+        z-index: 10000;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    .theme-switcher-container .theme-dropdown.force-show {
+        display: block !important;
+    }
+    
+    .left_nav {
+        width: 280px;
+    }
+    
+    .right-content {
+        width: calc(100vw - 318px);
+    }
+    
+    .footer {
+        height: 280px;
+        max-height: 280px;
+        min-height: 280px;
+    }
+    
+    .footer-content {
+        height: 245px;
+        padding: 15px;
+        font-size: 13px;
+    }
+    
+    .footer-content::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    .footer-content::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 5px;
+    }
+    
+    .footer-content::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+    
+    .footer-content::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+    
+    .footer-tab-header {
+        font-size: 11px;
+    }
+    
+    .main {
+        min-height: calc(100vh - 320px);
+        max-height: calc(100vh - 320px);
+    }
+    
+    .main_content {
+        max-height: calc(100vh - 350px);
+    }
+    
+    .tabs {
+        max-width: calc(100% - 70px);
+    }
+    
+    .tab {
+        min-width: 100px;
+        padding: 6px 10px 6px 8px;
+    }
+    
+    .tab h2 {
+        font-size: 11px;
+    }
+    
+    #achievements-content .text-content {
+        margin-left: 10px;
+        padding-left: 25px;
+    }
+    
+    #achievements-content .text-content::before {
+        left: 5px;
+        width: 2px;
+    }
+    
+    .mentor-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .mentor-photo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .skills-badges {
+        justify-content: center;
+    }
+    
+    .about-me-photo-float {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+        width: 180px;
+        height: 180px;
+    }
+    
+    .achievement-item {
+        flex-direction: column;
+    }
+    
+    .achievement-content {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .achievement-link {
+        width: 100%;
+    }
+    
+    .certificate-img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        margin: 0 auto 10px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stat-item {
+        padding: 15px;
+    }
+    
+    .stat-number {
+        font-size: 28px;
+    }
+    
+    .download-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .download-level-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .download-counter {
+        align-self: flex-start;
+    }
+    
+    .download-notification {
+        left: 20px;
+        right: 20px;
+        bottom: 100px;
+    }
+    
+    .terminal-output {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .text-content {
+        padding: 8px 15px;
+    }
+    
+    .sport-item {
+        padding: 20px 15px;
+        margin: 15px 0;
+    }
+    
+    .sport-period {
+        font-size: 13px;
+    }
+    
+    .sport-name {
+        font-size: 16px;
+    }
+    
+    .sport-description {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-content {
+        padding: 8px 15px;
+    }
+    
+    .theme-switcher-container .theme-dropdown {
+        width: 180px;
+        left: 40px;
+    }
+    
+    .theme-option {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 769px) {
+    .theme-dropdown {
+        position: absolute !important;
+        left: 45px !important;
+        top: 0 !important;
+        z-index: 1000 !important;
+    }
+}
+/* ========== СТИЛИ ДЛЯ ФОТОКОЛЛАЖА В ДОСТИЖЕНИЯХ ========== */
+
+.photo-collage-container {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.collage-main {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    height: 220px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.collage-large {
+    flex: 2;
+    position: relative;
+    overflow: hidden;
+}
+
+.collage-photo-large {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.collage-large:hover .collage-photo-large {
+    transform: scale(1.05);
+}
+
+.collage-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.collage-small {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.collage-photo-small {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.collage-small:hover .collage-photo-small {
+    transform: scale(1.1);
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: white;
+    font-size: 10px;
+    padding: 5px 8px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.collage-large:hover .photo-caption,
+.collage-small:hover .photo-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========== СТИЛИ ДЛЯ КНОПОК СКАЧИВАНИЯ ========== */
+
+.presentation-downloads {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.file-download-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.file-download-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.file-download-btn:hover::before {
+    left: 100%;
+}
+
+.file-download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Word кнопка */
+.word-btn {
+    background: linear-gradient(135deg, #2b579a 0%, #1e4a8a 100%);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.word-btn:hover {
+    background: linear-gradient(135deg, #1e4a8a 0%, #173b75 100%);
+    box-shadow: 0 6px 15px rgba(43, 87, 154, 0.3);
+}
+
+/* PowerPoint кнопка */
+.powerpoint-btn {
+    background: linear-gradient(135deg, #d24726 0%, #b33c1e 100%);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.powerpoint-btn:hover {
+    background: linear-gradient(135deg, #b33c1e 0%, #8c2d16 100%);
+    box-shadow: 0 6px 15px rgba(210, 71, 38, 0.3);
+}
+
+/* Иконки файлов */
+.file-icon-container {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+/* УДАЛИТЬ фильтр для иконок - они будут цветными */
+.file-type-icon {
+    width: 24px;
+    height: 24px;
+    /* Удаляем filter: brightness(0) invert(1); чтобы иконки были цветными */
+}
+
+/* Информация о файле */
+.file-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.file-name {
+    font-family: 'Poppins-medium';
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.file-format {
+    font-size: 11px;
+    opacity: 0.9;
+}
+
+.file-size {
+    font-size: 11px;
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 2px 6px;
+    border-radius: 10px;
+    align-self: flex-start;
+    margin-top: 3px;
+}
+
+/* Стрелка скачивания */
+.download-arrow {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.file-download-btn:hover .download-arrow {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(2px);
+}
+
+/* ========== ИСПРАВЛЕНИЕ ВЫРАВНИВАНИЯ ========== */
+
+/* Убедимся, что achievement-item правильно выровнен */
+.achievement-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid;
+    transition: all 0.3s ease;
+    /* Гарантируем, что правый блок не сдвигается */
+    justify-content: space-between;
+    width: 100%;
+}
+
+.achievement-content {
+    flex: 1;
+    margin-right: 30px;
+    min-width: 0; /* Важно для предотвращения переполнения */
+}
+
+/* Для третьего достижения увеличиваем ширину правого блока */
+.achievement-item:nth-child(3) .achievement-link {
+    flex-shrink: 0;
+    width: 320px; /* Фиксированная ширина для фотоколлажа */
+    min-width: 320px; /* Минимальная ширина */
+}
+
+/* Адаптивность для фотоколлажа и кнопок */
+@media (max-width: 768px) {
+    .photo-collage-container {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    .collage-main {
+        height: 180px;
+    }
+    
+    .file-download-btn {
+        padding: 10px 12px;
+    }
+    
+    .file-icon-container {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .file-type-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .file-name {
+        font-size: 13px;
+    }
+    
+    .file-format {
+        font-size: 10px;
+    }
+    
+    .file-size {
+        font-size: 10px;
+        padding: 1px 5px;
+    }
+    
+    .download-arrow {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+    }
+    
+    /* На мобильных делаем колонку для третьего достижения */
+    .achievement-item:nth-child(3) {
+        flex-direction: column;
+    }
+    
+    .achievement-item:nth-child(3) .achievement-content {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    .achievement-item:nth-child(3) .achievement-link {
+        width: 100%;
+        max-width: 280px;
+        min-width: unset;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .collage-main {
+        height: 150px;
+    }
+    
+    .photo-caption {
+        font-size: 9px;
+        padding: 3px 5px;
+    }
+    
+    .file-download-btn {
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px;
+        text-align: center;
+    }
+    
+    .file-info {
+        align-items: center;
+    }
+    
+    .file-size {
+        align-self: center;
+    }
+    
+    .download-arrow {
+        align-self: center;
+    }
+}
+
+/* Анимация при наведении на весь блок достижения */
+.achievement-item:hover .collage-main {
+    border-color: var(--terminal-teal, #4ec9b0);
+    box-shadow: 0 6px 20px rgba(78, 201, 176, 0.2);
+}
+
+/* ========== ТЕМЫ ДЛЯ ИКОНОК ========== */
+
+/* Синяя тема (color.css) - иконки цветные на белом фоне */
+[data-theme="color"] .file-icon-container {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="color"] .collage-main {
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="color"] .photo-caption {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+
+[data-theme="color"] .achievement-item:hover .collage-main {
+    border-color: var(--terminal-teal, #4ec9b0);
+    box-shadow: 0 6px 20px rgba(78, 201, 176, 0.2);
+}
+
+/* Белая тема (white_color.css) */
+[data-theme="white_color"] .collage-main {
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="white_color"] .photo-caption {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+
+[data-theme="white_color"] .file-icon-container {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="white_color"] .achievement-item:hover .collage-main {
+    border-color: var(--ocean-teal, #1abc9c);
+    box-shadow: 0 6px 20px rgba(26, 188, 156, 0.2);
+}
+
+/* Темная тема (dark_color.css) */
+[data-theme="dark_color"] .collage-main {
+    border-color: #30363d;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark_color"] .photo-caption {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+[data-theme="dark_color"] .file-icon-container {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark_color"] .achievement-item:hover .collage-main {
+    border-color: var(--accent-blue, #58a6ff);
+    box-shadow: 0 6px 20px rgba(88, 166, 255, 0.2);
+}
+/* ========== УВЕЛИЧЕНИЕ РАЗМЕРА ТЕКСТА В РАЗДЕЛАХ ========== */
+#about-me-content .text-content,
+#achievements-content .text-content {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+#about-me-content .text-content h1,
+#achievements-content .text-content h1 {
+    font-size: 32px;
+}
+
+#about-me-content .text-content h2,
+#achievements-content .text-content h2 {
+    font-size: 24px;
+}
+
+#about-me-content .text-content h3,
+#achievements-content .text-content h3 {
+    font-size: 20px;
+}
+
+#about-me-content .text-content p,
+#achievements-content .text-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+#about-me-content .text-content ul,
+#achievements-content .text-content ul {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    #about-me-content .text-content,
+    #achievements-content .text-content {
+        font-size: 14px;
+    }
+    
+    #about-me-content .text-content h1,
+    #achievements-content .text-content h1 {
+        font-size: 26px;
+    }
+    
+    #about-me-content .text-content h2,
+    #achievements-content .text-content h2 {
+        font-size: 20px;
+    }
+    
+    #about-me-content .text-content h3,
+    #achievements-content .text-content h3 {
+        font-size: 18px;
+    }
+}
+@keyframes expandFooter {
+    from {
+        max-height: 35px;
+    }
+    to {
+        max-height: 280px;
+    }
+}
+
+@keyframes collapseFooter {
+    from {
+        max-height: 280px;
+    }
+    to {
+        max-height: 35px;
+    }
+}
+@media (max-width: 768px) {
+    .footer {
+        height: 35px;
+    }
+    
+    .footer.expanded {
+        height: 280px;
+    }
+    
+    .footer-content {
+        height: 245px;
+        padding: 15px;
+        font-size: 13px;
+    }
+    
+    .main {
+        min-height: auto;
+        max-height: auto;
+    }
+    
+    .main_content {
+        max-height: none;
+    }
+}
+@keyframes footerExpand {
+    from {
+        height: 35px;
+    }
+    to {
+        height: 280px;
+    }
+}
+
+@keyframes footerCollapse {
+    from {
+        height: 280px;
+    }
+    to {
+        height: 35px;
+    }
+}
+
+.footer.expanding {
+    animation: footerExpand 0.3s ease forwards;
+}
+
+.footer.collapsing {
+    animation: footerCollapse 0.3s ease forwards;
+}
+@media (max-width: 768px) {
+    .download-level-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .download-counter {
+        align-self: flex-start;
+    }
+    
+    .level-divider {
+        margin: 10px 0 20px 0;
+    }
+}
+.download-card-tech .tech-tag {
+    background-color: var(--tech-tag-bg, rgba(78, 201, 176, 0.15));
+    color: var(--tech-tag-text, #4ec9b0);
+    border: 1px solid var(--tech-tag-border, rgba(78, 201, 176, 0.3));
+}
+.tech-tag {
+    background-color: var(--tech-tag-bg, rgba(78, 201, 176, 0.15));
+    color: var(--tech-tag-text, #4ec9b0);
+    border: 1px solid var(--tech-tag-border, rgba(78, 201, 176, 0.3));
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    display: inline-block;
+}

@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'MPLUS-bold';
+    src:
+    url('/fonts/MPLUS1Code-Bold.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Bold.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-medium';
+    src:
+    url('/fonts/MPLUS1Code-Medium.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Medium.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-regular';
+    src:
+    url('/fonts/MPLUS1Code-Regular.woff2') format('woff2'),
+    url('fonts/MPLUS1Code-Regular.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-thin';
+    src:
+    url('/fonts/MPLUS1Code-Thin.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Thin.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    font-family: 'MPLUS-regular';
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color: rgb(223, 245, 255);
+}
+.page {
+    max-width: 1400px;
+    background-color: rgb(211, 236, 216);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 150px;
+}
+.title {
+    margin-bottom: 40px;
+}
+.block {
+    border: 2px solid black;
+    padding: 15px;
+}
+.block p {
+    font-size: 22px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+/* .block p:nth-of-type(3) {
+    color: red;
+} */
+/* .block :first-child {
+    color: red;
+} */
+.block :nth-child(n+3) {
+    color: blueviolet;
+}
+.menu {
+    width: 300px;
+    border: 2px solid black;
+    margin-bottom: 40px;
+    list-style-type: none;
+    padding: 0px 20px;
+}
+.menu li {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.menu li:not(:last-child) {
+    margin-bottom: 20px;
+    color: red;
+}

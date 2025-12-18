@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'MPLUS-bold';
+    src:
+    url('/fonts/MPLUS1Code-Bold.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Bold.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-medium';
+    src:
+    url('/fonts/MPLUS1Code-Medium.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Medium.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-regular';
+    src:
+    url('/fonts/MPLUS1Code-Regular.woff2') format('woff2'),
+    url('fonts/MPLUS1Code-Regular.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-thin';
+    src:
+    url('/fonts/MPLUS1Code-Thin.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Thin.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    font-family: 'MPLUS-regular';
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color: rgb(223, 245, 255);
+}
+.page {
+    max-width: 1400px;
+    background-color: rgb(211, 236, 216);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 150px;
+    display: block;
+}
+.title {
+    text-align: center;
+    font-family: 'MPLUS-medium';
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.cards {
+    display: flex;
+    max-width: 950px;
+    margin-left: 100px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /* gap: 20px; */
+}
+.card {
+    width: 150px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+}
+.foot {
+    text-align: center;
+    font-family: 'MPLUS-thin';
+    margin-top: 10px;
+}

@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'MPLUS-medium';
+    src:
+    url('/fonts/Gordita-Medium.woff2') format('woff2'),
+    url('/fonts/Gordita-Medium.woff') format('woff'),
+    url('/fonts/Gordita-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Gordita-regular';
+    src:
+    url('/fonts/Gordita-regular.woff2') format('woff2'),
+    url('fonts/Gordita-regular.woff') format('woff'),
+    url('/fonts/Gordita-regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    font-family: 'Gordita-regular';
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color: #E5E5E5;
+
+}
+.page {
+    max-width: 1740px;
+    background-color: #FAFAFA;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 150px;
+    
+}
+                                                                /*          $$\   $$\ $$$$$$$$\  $$$$$$\  $$$$$$$\           */
+                                                                /*          $$ |  $$ |$$  _____|$$  __$$\ $$  __$$\          */
+                                                                /*          $$ |  $$ |$$ |      $$ /  $$ |$$ |  $$ |         */
+                                                                /*          $$$$$$$$ |$$$$$\    $$$$$$$$ |$$ |  $$ |         */
+                                                                /*          $$  __$$ |$$  __|   $$  __$$ |$$ |  $$ |         */
+                                                                /*          $$ |  $$ |$$ |      $$ |  $$ |$$ |  $$ |         */
+                                                                /*          $$ |  $$ |$$$$$$$$\ $$ |  $$ |$$$$$$$  |         */
+                                                                /*          \__|  \__|\________|\__|  \__|\_______/          */
+
+
+
+.head {
+    /* border: 1px solid black; */
+    width: 1260px;
+    height: 353px;
+    margin-left: 90px;
+    margin-right: 90px;
+    display: inline-block;
+    margin-bottom: 10px;
+
+}
+.head_p {
+    margin-top: 73px;
+    font-family: 'MPLUS-medium';
+    margin-left: 50%;
+    margin-right: 50%;
+    font-size: 36px;
+    line-height: 100%;
+    color: #303948;
+    margin-bottom: 25px;
+}
+.head_sp {
+    margin-top: 0px;
+    margin-left: 347px;
+    margin-right: 347px;
+    font-size: 18px;
+    line-height: 100%;
+    color: #303948;
+    text-align: center;
+    margin-bottom: 56px;
+
+}
+.logo_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+}
+.logo {
+    display: flex;
+}
+.am {
+    position: relative;
+    top: 10px;
+}
+                                                                /*      $$\      $$\  $$$$$$\  $$$$$$\ $$\   $$\         */
+                                                                /*      $$$\    $$$ |$$  __$$\ \_$$  _|$$$\  $$ |        */
+                                                                /*      $$$$\  $$$$ |$$ /  $$ |  $$ |  $$$$\ $$ |        */
+                                                                /*      $$\$$\$$ $$ |$$$$$$$$ |  $$ |  $$ $$\$$ |        */
+                                                                /*      $$ \$$$  $$ |$$  __$$ |  $$ |  $$ \$$$$ |        */
+                                                                /*      $$ |\$  /$$ |$$ |  $$ |  $$ |  $$ |\$$$ |        */
+                                                                /*      $$ | \_/ $$ |$$ |  $$ |$$$$$$\ $$ | \$$ |        */
+                                                                /*      \__|     \__|\__|  \__|\______|\__|  \__|        */
+.main {
+    /* border: 1px solid black; */
+    width: 1260px;
+    height: 905px;
+    margin-left: 90px;
+    margin-right: 90px;
+    display: inline-block;
+}
+
+.i2 {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    float:left;
+    margin-top: 69px;
+}
+.i1, .i3 {
+    position: absolute;
+    z-index: 2;
+    display: inline-block;
+}
+.i3 {
+    margin-top: 170px;
+    margin-left: -646px;
+}
+.i1 {
+    margin-left: -160px;
+    margin-top: -210px;
+}
+.text {
+    width: 615px;
+    height: 182px;
+    margin-top: 80px;
+    margin-left: 645px;
+}
+.h2 {
+    font-family: 'MPLUS-medium';
+    font-size: 36px;
+    line-height: 100%;
+    text-align: left;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    color: #14213D;
+}
+.mini_p {
+    display: inline-block;
+    text-align: right;
+    line-height: 100%;
+    text-align: left;
+    font-size: 18px;
+    color: #303948;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 88px;
+    margin-left: 645px;
+    margin-top: 74px;
+}
+.card {
+    /* border: 1px solid black; */
+    width: 251px;
+    height: 160px;
+}
+.ico {
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    float:left;
+}
+
+.card_title {
+    text-align: left;
+    display: block;
+    margin-left: 15px;
+    font-size: 16px;
+    line-height: 100%;
+    font-family: 'MPLUS-medium';
+    margin-bottom: 38px;
+    margin-top: 21px;
+    color: #303948;
+}
+.card_p {
+    text-align: left;
+    clear: both;
+    font-size: 18px;
+    line-height:100% ;
+    margin-left: 8px;
+    color: #59616D;
+}

@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'MPLUS-bold';
+    src:
+    url('/fonts/MPLUS1Code-Bold.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Bold.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-medium';
+    src:
+    url('/fonts/MPLUS1Code-Medium.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Medium.woff') format('woff'),
+    url('fonts/MPLUS1Code-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-regular';
+    src:
+    url('/fonts/MPLUS1Code-Regular.woff2') format('woff2'),
+    url('fonts/MPLUS1Code-Regular.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-thin';
+    src:
+    url('/fonts/MPLUS1Code-Thin.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Thin.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    font-family: 'MPLUS-regular';
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(244, 252, 255);
+}
+.page {
+    max-width: 1400px;
+    /* background-color: rgb(11, 173, 46); */
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 50px;
+}
+/* --------------------------------НАЧАЛО--------------------------- */
+h1 {
+    margin: 20px;
+    font-family: 'MPLUS-bold';
+}
+h2 {
+    margin: 20px;
+    font-family: 'MPLUS-medium';
+    font-style: italic;
+}
+h3 {
+    margin: 20px;
+    font-family: 'MPLUS-medium';
+    font-style: italic;
+}
+ol {
+    margin-left: 150px;
+}
+.s_i {
+    font-style: italic;
+    color: gray;
+}
+.s_b {
+    color: darkblue;
+}
+.s_med {
+    font-family: 'MPLUS-medium';
+    font-style: normal;
+    color: rgb(80, 80, 80);
+}
+a {
+    padding: 10px 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    display: inline-block;
+    background-color: chocolate;
+    color: chartreuse;
+    font-family: 'MPLUS-medium';
+    font-style: normal;
+    text-decoration: none;
+}

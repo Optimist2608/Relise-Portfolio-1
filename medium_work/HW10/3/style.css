@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'MPLUS-bold';
+    src:
+    url('/fonts/MPLUS1Code-Bold.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Bold.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-medium';
+    src:
+    url('/fonts/MPLUS1Code-Medium.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Medium.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-regular';
+    src:
+    url('/fonts/MPLUS1Code-Regular.woff2') format('woff2'),
+    url('fonts/MPLUS1Code-Regular.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-thin';
+    src:
+    url('/fonts/MPLUS1Code-Thin.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Thin.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    font-family: 'MPLUS-regular';
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color: rgb(223, 245, 255);
+}
+.title {
+    font-family: 'MPLUS-medium';
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    margin-top: 40px;
+    position: relative;
+}
+.img {
+    position: absolute;
+    display: inline-block;
+}
+#a {
+    translate: 700px;
+    rotate: 30deg;
+}
+#b {
+    translate: 700px 80px;
+    rotate: 15deg;
+}
+#c {
+    translate: 800px 100px;
+    /* rotate: 15deg; */
+}
+#d {
+    translate: 900px 80px;
+    rotate: -15deg;
+}
+#e {
+    translate: 900px ;
+    rotate: 270deg;
+}
+#a, #b, #c, #d, #e {
+    transition: 5s;
+    animation: 5s roll ease-out ;
+}
+@keyframes roll {
+    0% {
+        transform: translate(2000px) rotate(0);
+    }
+    100% {
+        transform: translate(0px) rotate(360deg);
+    }
+}

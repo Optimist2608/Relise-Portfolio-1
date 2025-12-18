@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'MPLUS-bold';
+    src:
+    url('/fonts/MPLUS1Code-Bold.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Bold.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-medium';
+    src:
+    url('/fonts/MPLUS1Code-Medium.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Medium.woff') format('woff'),
+    url('fonts/MPLUS1Code-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-regular';
+    src:
+    url('/fonts/MPLUS1Code-Regular.woff2') format('woff2'),
+    url('fonts/MPLUS1Code-Regular.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-thin';
+    src:
+    url('/fonts/MPLUS1Code-Thin.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Thin.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    font-family: 'MPLUS-regular';
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(253, 247, 247);
+}
+.page {
+    max-width: 1400px;
+    background-color: rgb(253, 247, 247);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 150px;
+}
+/* -------------------------------НАЧАЛО-------------------------- */
+/* .list {
+padding:20px;
+} */
+ol {
+    background-color: rgb(234, 161, 248);
+    list-style-position: inside;
+    margin: 20px 10px;
+    padding: 10px;
+}
+li {
+    background-color: rgb(241, 90, 153);
+    margin: 20px 10px;
+    padding: 10px;
+    color: rgb(255, 241, 251);
+    font-family: 'MPLUS-bold';
+}
+.l1 {
+    background-color: rgb(97, 0, 84);
+    padding: 10px;
+}
+a {
+    padding: 10px 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    display: inline-block;
+    background-color: chocolate;
+    color: chartreuse;
+    font-family: 'MPLUS-medium';
+    font-style: normal;
+    text-decoration: none;
+}

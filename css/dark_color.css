@@ -1,0 +1,807 @@
+/* dark_color.css - Темная тема в стиле Adonis Darker */
+
+/* ========== CSS ПЕРЕМЕННЫЕ ========== */
+:root {
+    --download-card-bg: rgba(255, 255, 255, 0.05);
+--download-card-border: rgba(255, 255, 255, 0.1);
+--download-card-hover-border: var(--terminal-teal);
+--tech-tag-bg: rgba(78, 201, 176, 0.15);
+--tech-tag-text: var(--terminal-teal);
+--tech-tag-border: rgba(78, 201, 176, 0.3);
+--download-btn-bg: var(--terminal-teal);
+--download-btn-text: var(--primary-dark);
+--download-info-bg: rgba(0, 0, 0, 0.2);
+--download-info-border: var(--terminal-teal);
+--notification-bg: var(--primary-dark);
+--notification-border: var(--terminal-teal);
+    /* Основные цвета фона - Adonis Darker */
+    --primary-dark: #0d1117;
+    --sidebar-dark: #161b22;
+    --nav-dark: #0d1117;
+    --tab-active: #1a1f29;
+    --tab-inactive: #0d1117;
+    --footer-tabs-bg: #161b22;
+    --footer-tab-active-bg: #0d1117;
+    --footer-tab-hover-bg: rgba(255, 255, 255, 0.05);
+    --notification-bg: #0d1117;
+    --notification-border: #30363d;
+    --notification-shadow: rgba(0, 0, 0, 0.3);
+    --empty-state-bg: #0d1117;
+    
+    /* Цвета текста */
+    --text-light: #c9d1d9;
+    --text-gray: #8b949e;
+    --text-muted: #6e7681;
+    --path-active: #58a6ff;
+    --path-inactive: #8b949e;
+    --empty-state-text: #8b949e;
+    
+    /* Границы и разделители */
+    --border-light: #30363d;
+    --border-dark: #21262d;
+    
+    /* Акцентные цвета - Adonis Palette */
+    --accent-blue: #58a6ff;
+    --accent-green: #3fb950;
+    --accent-orange: #ff7b72;
+    --accent-purple: #bc8cff;
+    --accent-yellow: #e3b341;
+    --accent-pink: #ff7b72;
+    --accent-teal: #39c5cf;
+    
+    /* Цвета для футера */
+    --problems-red: #ff7b72;
+    --output-blue: #58a6ff;
+    --debug-orange: #e3b341;
+    --terminal-teal: #39c5cf;
+    --comments-green: #3fb950;
+    
+    /* Цвета скроллбаров */
+    --scrollbar-track: #161b22;
+    --scrollbar-thumb: #30363d;
+    --scrollbar-thumb-hover: #58a6ff;
+    --text-scrollbar-thumb: rgba(255, 255, 255, 0.1);
+    --text-scrollbar-thumb-hover: rgba(255, 255, 255, 0.2);
+    --footer-scrollbar-thumb: #30363d;
+    --footer-scrollbar-thumb-hover: #58a6ff;
+    
+    /* Достижения */
+    --achievements-gradient-start: #3fb950;
+    --achievements-gradient-end: #39c5cf;
+    --achievement-bg: rgba(22, 27, 34, 0.6);
+    --achievement-border: #58a6ff;
+    --achievement-details-bg: rgba(0, 0, 0, 0.2);
+    --certificate-border: rgba(255, 255, 255, 0.1);
+    --certificate-hover-border: #58a6ff;
+    --certificate-hover-shadow: rgba(88, 166, 255, 0.4);
+    --stats-gradient-start: rgba(88, 166, 255, 0.1);
+    --stats-gradient-end: rgba(57, 197, 207, 0.1);
+    --stats-border: rgba(255, 255, 255, 0.1);
+    --stat-item-bg: rgba(0, 0, 0, 0.3);
+    --achievements-footer-bg: rgba(0, 0, 0, 0.2);
+    --achievements-footer-border: rgba(255, 255, 255, 0.1);
+    --portfolio-link-bg: #58a6ff;
+    --portfolio-link-text: #0d1117;
+    
+    /* Обо мне */
+    --profession-title-color: #58a6ff;
+    --about-me-header-border: rgba(255, 255, 255, 0.1);
+    --skill-badge-bg: rgba(88, 166, 255, 0.1);
+    --skill-badge-text: #58a6ff;
+    --skill-badge-border: rgba(88, 166, 255, 0.3);
+    --photo-border: #58a6ff;
+    --current-learning-bg: rgba(0, 0, 0, 0.3);
+    --current-learning-border: #58a6ff;
+    --aviation-details-bg: rgba(22, 27, 34, 0.3);
+    --aviation-details-border: rgba(255, 255, 255, 0.1);
+    --mentor-section-gradient-start: rgba(13, 17, 23, 0.6);
+    --mentor-section-gradient-end: rgba(22, 27, 34, 0.6);
+    --mentor-section-border: rgba(255, 255, 255, 0.1);
+    --mentor-photo-border: #58a6ff;
+    --mentor-skills-bg: rgba(0, 0, 0, 0.2);
+    --club-info-bg: rgba(88, 166, 255, 0.1);
+    --club-info-border: #58a6ff;
+    --timeline-line: rgba(255, 255, 255, 0.1);
+    --sport-item-bg: rgba(22, 27, 34, 0.6);
+    --sport-item-current-bg: rgba(88, 166, 255, 0.1);
+    --sport-item-current-border: #58a6ff;
+    --sport-item-marker: #58a6ff;
+    --sport-item-marker-border: #0d1117;
+    --sport-item-current-marker: #39c5cf;
+    --sport-name-underline: #58a6ff;
+    --sport-item-connector: rgba(255, 255, 255, 0.2);
+    --sports-conclusion-bg: rgba(0, 0, 0, 0.2);
+    --sports-conclusion-border: #3fb950;
+    --plan-category-bg: rgba(22, 27, 34, 0.6);
+    --plan-category-border: rgba(255, 255, 255, 0.1);
+    --quote-gradient-start: rgba(13, 17, 23, 0.6);
+    --quote-gradient-end: rgba(22, 27, 34, 0.6);
+    --quote-border: #58a6ff;
+    --download-header-color: var(--text-light);
+--download-description-color: var(--text-gray);
+--download-level-title: var(--accent-blue);
+--download-counter-bg: var(--accent-blue);
+--download-counter-text: var(--primary-dark);
+--level-divider-color: var(--border-light);
+
+}
+
+/* ========== ОСНОВНЫЕ ЭЛЕМЕНТЫ ========== */
+
+/* Body и основной фон */
+body {
+    background-color: var(--primary-dark);
+}
+
+/* Левое боковое меню */
+.left_menu {
+    background-color: var(--sidebar-dark);
+    border-right: 1px solid var(--border-dark);
+}
+
+/* Левая навигация */
+.left_nav {
+    background-color: var(--sidebar-dark);
+    color: var(--text-light);
+    border-right: 1px solid var(--border-dark);
+}
+
+#left_nav_h2 {
+    color: var(--text-light);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.left_nav_main_sec {
+    background-color: transparent;
+    border-bottom: 1px solid var(--border-light);
+    padding: 8px 10px;
+}
+
+.left_nav_h3 {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.left_nav_ul li {
+    color: var(--text-light);
+    padding: 6px 0 6px 30px;
+    transition: background-color 0.2s ease;
+}
+
+.left_nav_ul li:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.left_nav_ul li::before {
+    filter: brightness(0.8) invert(0.7);
+}
+
+/* Стили для выпадающего меню тем */
+.theme-dropdown {
+    background-color: var(--nav-dark);
+    border: 1px solid var(--border-light);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.theme-option {
+    color: var(--text-light);
+    border-bottom: 1px solid var(--border-light);
+    padding: 10px 15px;
+    transition: all 0.2s ease;
+}
+
+.theme-option:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--accent-blue);
+}
+
+.theme-option.active {
+    background-color: rgba(88, 166, 255, 0.15);
+    color: var(--accent-blue);
+    position: relative;
+}
+
+.theme-option.active::after {
+    content: '✓';
+    position: absolute;
+    right: 15px;
+    color: var(--accent-blue);
+    font-weight: bold;
+}
+
+/* ========== ПРАВАЯ ЧАСТЬ ========== */
+
+/* Верхняя часть с табами */
+.head_title {
+    background-color: var(--nav-dark);
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.tab {
+    background-color: var(--tab-inactive);
+    border: 1px solid var(--border-light);
+    border-bottom-color: transparent;
+    transition: all 0.2s ease;
+}
+
+.tab:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.tab h2 {
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+/* Навигация в основном контенте */
+.main_nav {
+    background-color: var(--nav-dark);
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.path {
+    color: var(--text-light);
+}
+
+.path li:not(:last-child)::after {
+    filter: brightness(0.7) invert(0.5);
+}
+
+.path li:last-child {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: var(--path-active);
+}
+
+.file-icon {
+    filter: brightness(0.8) invert(0.7);
+}
+
+.menu-icon {
+    filter: brightness(0.8) invert(0.6);
+}
+
+.menu-icon:hover {
+    filter: brightness(0.9) invert(0.8);
+}
+
+/* Основной контент */
+.main_content {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+}
+
+/* Редактор кода */
+.code-editor {
+    background-color: var(--primary-dark);
+    border: 1px solid var(--border-dark);
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+}
+
+.line-numbers {
+    background-color: rgba(22, 27, 34, 0.8);
+    color: var(--text-muted);
+    border-right: 1px solid var(--border-dark);
+    font-family: 'RobotoMono-Bold', 'Consolas', monospace;
+    font-size: 13px;
+    padding: 15px 8px;
+}
+
+.line-numbers span {
+    opacity: 0.7;
+}
+
+.text-content {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    padding: 20px 40px;
+    line-height: 1.7;
+}
+
+/* Стили для текстового контента */
+.text-content h1 {
+    color: var(--text-light);
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.text-content h2 {
+    color: var(--accent-blue);
+    margin: 25px 0 15px;
+    font-weight: 600;
+    padding-left: 10px;
+    border-left: 3px solid var(--accent-blue);
+}
+
+.text-content h3 {
+    color: var(--accent-orange);
+    margin: 20px 0 12px;
+    font-weight: 500;
+}
+
+.text-content p {
+    color: #c9d1d9;
+    margin-bottom: 16px;
+    padding: 0 5px;
+}
+
+.text-content ul {
+    margin-bottom: 20px;
+    padding-left: 25px;
+}
+
+.text-content li {
+    color: #c9d1d9;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+.text-content li::marker {
+    color: var(--accent-green);
+}
+
+/* Стили для особых элементов */
+.text-content strong {
+    color: var(--accent-yellow);
+    font-weight: 600;
+}
+
+.text-content em {
+    color: var(--accent-teal);
+    font-style: italic;
+}
+
+/* ========== ФУТЕР ========== */
+
+.footer {
+    border-top: 1px solid var(--border-dark);
+    background-color: var(--nav-dark);
+}
+
+.footer-tabs {
+    background-color: var(--footer-tabs-bg);
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.footer-tab {
+    border-right: 1px solid var(--border-dark);
+    color: var(--text-light);
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.footer-tab:hover {
+    background-color: var(--footer-tab-hover-bg);
+    color: var(--accent-blue);
+}
+
+.footer-tab.active {
+    background-color: var(--footer-tab-active-bg);
+    border-bottom: 2px solid;
+    color: var(--text-light);
+}
+
+.footer-tab-header {
+    color: inherit;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.footer-content {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    padding: 20px;
+    font-family: 'RobotoMono-Bold', monospace;
+    font-size: 13px;
+}
+
+/* Цвета границ для вкладок футера */
+.footer-tab[data-tab="problems"] {
+    border-left: 3px solid var(--problems-red);
+}
+
+.footer-tab[data-tab="output"] {
+    border-left: 3px solid var(--output-blue);
+}
+
+.footer-tab[data-tab="debug"] {
+    border-left: 3px solid var(--debug-orange);
+}
+
+.footer-tab[data-tab="terminal"] {
+    border-left: 3px solid var(--terminal-teal);
+}
+
+.footer-tab[data-tab="comments"] {
+    border-left: 3px solid var(--comments-green);
+}
+
+/* Терминал */
+.terminal-prompt {
+    color: var(--accent-green);
+    font-weight: 600;
+}
+
+.terminal-text {
+    color: var(--text-light);
+}
+
+/* ========== ФИЛЬТРЫ ДЛЯ ИКОНОК ========== */
+
+/* Иконки в левом меню */
+.left_menu_img {
+    filter: brightness(0.8) invert(0.7);
+    transition: all 0.2s ease;
+}
+
+.left_menu_img:hover {
+    filter: brightness(1) invert(0.9);
+    transform: translateY(-1px);
+}
+
+.left_menu_img.theme-switcher {
+    filter: brightness(0.9) sepia(1) hue-rotate(180deg) saturate(2);
+}
+
+/* Иконки в левой навигации */
+.a-d,
+#img_nav_top,
+.left_nav_main_sec_img {
+    filter: brightness(0.8) invert(0.7);
+    transition: all 0.2s ease;
+}
+
+.a-d:hover,
+#img_nav_top:hover,
+.left_nav_main_sec_img:hover {
+    filter: brightness(1) invert(0.9);
+}
+
+/* Иконки в верхней панели */
+#tab1 {
+    /* HTML иконка - специальная обработка */
+    filter: brightness(0.9) sepia(1) hue-rotate(-30deg) saturate(3);
+}
+
+#tab2,
+.header-icons img {
+    filter: brightness(0.8) invert(0.7);
+    transition: all 0.2s ease;
+}
+
+#tab2:hover,
+.header-icons img:hover {
+    filter: brightness(1) invert(0.9);
+    transform: scale(1.1);
+}
+
+/* Иконки в основной навигации */
+.menu-icon {
+    filter: brightness(0.8) invert(0.6);
+}
+
+.menu-icon:hover {
+    filter: brightness(0.9) invert(0.8);
+}
+
+/* Иконки в футере */
+.footer-tab-icon {
+    filter: brightness(0.8) invert(0.7);
+    transition: filter 0.2s ease;
+}
+
+.footer-tab:hover .footer-tab-icon {
+    filter: brightness(1) invert(0.9);
+}
+
+/* Иконка файла в основной навигации */
+.file-icon {
+    filter: brightness(0.8) invert(0.7);
+}
+
+/* ========== СКРОЛЛБАРЫ ========== */
+
+/* Основной скроллбар контента */
+.main_content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.main_content::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+.main_content::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 5px;
+    border: 2px solid var(--sidebar-dark);
+}
+
+.main_content::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+/* Скроллбар текстового контента */
+.text-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.text-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.text-content::-webkit-scrollbar-thumb {
+    background: var(--text-scrollbar-thumb);
+    border-radius: 4px;
+}
+
+.text-content::-webkit-scrollbar-thumb:hover {
+    background: var(--text-scrollbar-thumb-hover);
+}
+
+/* Скроллбар для футера */
+.footer-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.footer-content::-webkit-scrollbar-track {
+    background: var(--sidebar-dark);
+}
+
+.footer-content::-webkit-scrollbar-thumb {
+    background: var(--footer-scrollbar-thumb);
+    border-radius: 4px;
+}
+
+.footer-content::-webkit-scrollbar-thumb:hover {
+    background: var(--footer-scrollbar-thumb-hover);
+}
+
+/* ========== ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ========== */
+
+/* Пустое состояние */
+.no-tab-content {
+    background-color: var(--empty-state-bg);
+}
+
+.empty-state {
+    color: var(--empty-state-text);
+}
+
+.empty-state h1 {
+    color: var(--text-light);
+}
+
+/* Уведомления курсора */
+.cursor-notification {
+    background-color: var(--notification-bg);
+    color: var(--text-light);
+    border: 1px solid var(--notification-border);
+    box-shadow: 0 4px 12px var(--notification-shadow);
+}
+
+/* Достижения */
+#achievements-content .text-content::before {
+    background: linear-gradient(to bottom, var(--achievements-gradient-start), var(--achievements-gradient-end));
+}
+
+.achievement-item {
+    background-color: var(--achievement-bg);
+    border-left: 4px solid var(--achievement-border);
+}
+
+.achievement-details {
+    background-color: var(--achievement-details-bg);
+}
+
+.certificate-img {
+    border: 2px solid var(--certificate-border);
+}
+
+.certificate-link:hover .certificate-img {
+    border-color: var(--certificate-hover-border);
+    box-shadow: 0 0 15px var(--certificate-hover-shadow);
+}
+
+.achievements-stats {
+    background: linear-gradient(135deg, var(--stats-gradient-start), var(--stats-gradient-end));
+    border: 1px solid var(--stats-border);
+}
+
+.stat-item {
+    background-color: var(--stat-item-bg);
+}
+
+.achievements-footer {
+    background-color: var(--achievements-footer-bg);
+    border: 2px dashed var(--achievements-footer-border);
+}
+
+.full-portfolio-link {
+    background-color: var(--portfolio-link-bg);
+    color: var(--portfolio-link-text);
+}
+
+/* Обо мне */
+.profession-title {
+    color: var(--profession-title-color);
+}
+
+.about-me-header {
+    border-bottom: 2px solid var(--about-me-header-border);
+}
+
+.skill-badge {
+    background-color: var(--skill-badge-bg);
+    color: var(--skill-badge-text);
+    border: 1px solid var(--skill-badge-border);
+}
+
+.about-me-photo {
+    border: 3px solid var(--photo-border);
+}
+
+.current-learning {
+    background-color: var(--current-learning-bg);
+    border-left: 4px solid var(--current-learning-border);
+}
+
+.aviation-details {
+    background-color: var(--aviation-details-bg);
+    border: 1px solid var(--aviation-details-border);
+}
+
+.mentor-section {
+    background: linear-gradient(135deg, var(--mentor-section-gradient-start), var(--mentor-section-gradient-end));
+    border: 1px solid var(--mentor-section-border);
+}
+
+.mentor-photo {
+    border: 3px solid var(--mentor-photo-border);
+}
+
+.mentor-skills {
+    background-color: var(--mentor-skills-bg);
+}
+
+.club-info {
+    background-color: var(--club-info-bg);
+    border-left: 3px solid var(--club-info-border);
+}
+
+.sports-timeline:before {
+    background-color: var(--timeline-line);
+}
+
+.sport-item {
+    background-color: var(--sport-item-bg);
+}
+
+.sport-item.current {
+    background-color: var(--sport-item-current-bg);
+    border: 2px solid var(--sport-item-current-border);
+}
+
+.sport-item:before {
+    background-color: var(--sport-item-marker);
+    border: 3px solid var(--sport-item-marker-border);
+}
+
+.sport-item.current:before {
+    background-color: var(--sport-item-current-marker);
+    border-color: var(--sport-item-current-marker);
+}
+
+.sport-name:after {
+    background-color: var(--sport-name-underline);
+}
+
+.sport-item:after {
+    background-color: var(--sport-item-connector);
+}
+
+.sports-conclusion {
+    background-color: var(--sports-conclusion-bg);
+    border-left: 4px solid var(--sports-conclusion-border);
+}
+
+.plan-category {
+    background-color: var(--plan-category-bg);
+    border: 1px solid var(--plan-category-border);
+}
+
+.personal-quote {
+    background: linear-gradient(135deg, var(--quote-gradient-start), var(--quote-gradient-end));
+    border-left: 5px solid var(--quote-border);
+}
+/* ========== СТИЛИ ДЛЯ СИСТЕМЫ СКАЧИВАНИЯ ========== */
+
+.download-card {
+    background-color: var(--download-card-bg);
+    border: 1px solid var(--download-card-border);
+}
+
+.download-card:hover {
+    border-color: var(--download-card-hover-border);
+}
+
+
+
+.download-btn {
+    background-color: var(--download-btn-bg);
+    color: var(--download-btn-text);
+}
+/* тест */
+.download-info, .download-instructions {
+    background-color: var(--download-info-bg);
+    border-left: 4px solid var(--download-info-border);
+}
+
+.download-notification {
+    background-color: var(--notification-bg);
+    border: 1px solid var(--notification-border);
+}
+/* Стили для раздела информации о сайте */
+.site-info-content {
+    color: var(--text-light);
+}
+
+.info-section h3 {
+    color: var(--accent-blue);
+}
+
+.info-value {
+    color: var(--accent-green);
+}
+.tech-tag {
+    background-color: rgba(88, 166, 255, 0.15);
+    color: var(--accent-blue);
+    border: 1px solid rgba(88, 166, 255, 0.3);
+}
+
+
+.update-date {
+    color: var(--accent-orange);
+}
+/* Контакты для темной темы */
+/* Исправление для иконок контактов в темной теме */
+[data-theme="dark_color"] .contacts-content {
+    color: var(--text-light);
+}
+
+[data-theme="dark_color"] .contact-icon img {
+    filter: none !important;
+}
+
+[data-theme="dark_color"] .contact-card {
+    background-color: rgba(22, 27, 34, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark_color"] .contact-card:hover {
+    border-color: var(--card-accent);
+}
+
+[data-theme="dark_color"] .contact-info h4 {
+    color: var(--text-light);
+}
+
+[data-theme="dark_color"] .contact-desc {
+    color: var(--text-light);
+}
+
+[data-theme="dark_color"] .contact-value {
+    color: var(--text-light);
+}
+
+[data-theme="dark_color"] .time-label,
+[data-theme="dark_color"] .time-value {
+    color: var(--text-light);
+} 

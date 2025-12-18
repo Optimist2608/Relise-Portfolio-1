@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'MPLUS-bold';
+    src:
+    url('/fonts/MPLUS1Code-Bold.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Bold.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-medium';
+    src:
+    url('/fonts/MPLUS1Code-Medium.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Medium.woff') format('woff'),
+    url('fonts/MPLUS1Code-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-regular';
+    src:
+    url('/fonts/MPLUS1Code-Regular.woff2') format('woff2'),
+    url('fonts/MPLUS1Code-Regular.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-thin';
+    src:
+    url('/fonts/MPLUS1Code-Thin.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Thin.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    font-family: 'MPLUS-regular';
+    /* cursor: url("/img/cog_icon_125323.png"), auto; */
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(200, 229, 243);
+}
+.page {
+    max-width: 1400px;
+    background-color: rgb(177, 247, 192);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 150px;
+}
+hr {
+    margin: 20px 0px;
+}
+.card {
+    width: 300px;
+    background-color: rgb(196, 90, 15);
+    border-radius: 20px  0px 20px;
+    padding: 20px;
+}
+.card_text {
+    font-size: 22px;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 20px 0px;
+}
+.btn {
+    padding: 10px 30px;
+    font-size: 22px;
+}
+/* ------------------------------------------------------------ */
+.btn:hover  {
+    background-color: purple;
+    /* background-image: url(/img/R.png);/ */
+}
+.block {
+    padding: 10px;
+    border: 2px solid black;
+}
+/* .title:hover {
+    color: red;
+}
+.title {
+    display: inline-block;
+} */
+/* .btn:hover + .text {
+color: red;
+} */
+/* .btn:hover ~ .card {
+background-color: rgb(187, 6, 187);
+} */
+
+/* .card:hover ~r p {
+    background-color: darkred;
+    color: blanchedalmond;
+} */
+.title:has(~  .btn:hover) {
+    text-decoration: underline;
+}
+a {
+    color: rgb(247, 136, 0);
+    font-size: 50px;
+}
+a:visited {
+    color: rgb(219, 34, 105);
+    
+}
+.wrap {
+    width: 500px;
+    height: 500px;
+    background-image: url('/img/R.png');
+}
+.btn:hover ~ .wrap {
+    background-image: url('/img/cog_icon_125323.png');
+}

@@ -1,0 +1,553 @@
+/* swap.css - Стили для системы проектов с скроллом */
+/* тест */
+/* ========== СТИЛИ ДЛЯ ЭЛЕМЕНТОВ МЕНЮ КАК "ОБО МНЕ" ========== */
+
+/* Основной элемент уровня проектов (выглядит как "Обо мне") */
+.project-level-item {
+    position: relative;
+    padding: 6px 0 6px 30px;
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--text-light);
+    transition: background-color 0.2s ease;
+    flex-shrink: 0; /* Не сжимается при скролле */
+}
+
+.project-level-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Убираем стандартные маркеры у всех элементов */
+.project-level-item::before {
+    display: none !important;
+}
+
+/* Заголовок уровня проектов */
+.project-level-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Стрелка раскрытия */
+.level-arrow {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+    filter: brightness(0) invert(1) opacity(0.6);
+    flex-shrink: 0;
+}
+
+.project-level-item.expanded .level-arrow {
+    transform: rotate(90deg);
+}
+
+/* Название уровня (такой же шрифт как у "Обо мне") */
+.level-title {
+    font-family: 'Poppins-regular';
+    font-size: 13px;
+    color: inherit;
+    margin: 0;
+    flex-grow: 1;
+    white-space: nowrap; /* Не переносить текст */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Троеточие если не помещается */
+}
+
+/* ========== ВЛОЖЕННЫЙ СПИСОК ПРОЕКТОВ (МЕНЬШЕ РОДИТЕЛЯ) ========== */
+
+.projects-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-left: 24px; /* Отступ от родителя */
+}
+
+.project-level-item.expanded .projects-list {
+    max-height: 300px; /* Ограничиваем максимальную высоту */
+    overflow-y: auto; /* Добавляем скролл внутри списка */
+    scrollbar-width: thin; /* Тонкий скролл для Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+/* Кастомный скроллбар для списка проектов */
+.projects-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.projects-list::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 3px;
+}
+
+.projects-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.projects-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Элемент проекта (меньше родителя) */
+.project-item {
+    padding: 4px 0 4px 24px; /* Меньше чем у родителя */
+    cursor: pointer;
+    font-size: 11px !important; /* Меньший шрифт */
+    color: var(--text-gray);
+    position: relative;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    min-height: 24px; /* Меньшая высота */
+    white-space: nowrap; /* Не переносить текст */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Троеточие если не помещается */
+}
+
+.project-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-light);
+}
+
+/* Иконка файла для проекта */
+.project-item-icon {
+    width: 14px !important; /* Меньше стандартной иконки */
+    height: 14px !important;
+    margin-right: 6px;
+    filter: brightness(0) invert(1) opacity(0.7);
+    flex-shrink: 0;
+}
+
+.project-item.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--terminal-teal) !important;
+}
+
+.project-item.active .project-item-icon {
+    filter: brightness(0) saturate(100%) invert(66%) sepia(31%) saturate(1352%) hue-rotate(130deg) brightness(95%) contrast(101%);
+}
+
+/* Для пустых проектов */
+.project-item.empty {
+    opacity: 0.5;
+    cursor: default;
+    font-style: italic;
+    padding-left: 24px;
+}
+
+.project-item.empty:hover {
+    background-color: transparent;
+    color: var(--text-gray);
+}
+
+/* ========== СТИЛИ ДЛЯ СКРОЛЛА ВСЕЙ ЛЕВОЙ НАВИГАЦИИ ========== */
+
+/* Обертка для всего содержимого левой навигации */
+.left_nav_content {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px; /* Отступ снизу */
+}
+
+/* Стили для скроллбара левой навигации */
+.left_nav_content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.left_nav_content::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+    margin: 5px 0;
+}
+
+.left_nav_content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    border: 2px solid var(--sidebar-dark);
+    min-height: 40px;
+}
+
+.left_nav_content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.left_nav_content::-webkit-scrollbar-thumb:active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Для Firefox */
+.left_nav_content {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+/* ========== ОПТИМИЗАЦИЯ ДЛЯ БОЛЬШОГО КОЛИЧЕСТВА ПРОЕКТОВ ========== */
+
+/* Компактный режим для большого количества проектов */
+.compact-mode .project-item {
+    min-height: 20px;
+    padding: 2px 0 2px 24px;
+    font-size: 10px !important;
+}
+
+.compact-mode .project-item-icon {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+.compact-mode .projects-list {
+    max-height: 250px; /* Еще меньше в компактном режиме */
+}
+
+/* Тултип для длинных названий */
+.project-item[title] {
+    position: relative;
+}
+
+.project-item[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: var(--nav-dark);
+    color: var(--text-light);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000;
+    margin-left: 5px;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+}
+
+/* ========== СТИЛИ ДЛЯ IFRAME С ПРОЕКТОМ ========== */
+
+.project-frame-container {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.project-frame-container.active {
+    display: block;
+}
+
+.project-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.project-frame-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: var(--nav-dark);
+    border-bottom: 1px solid var(--border-light);
+    border-radius: 4px 4px 0 0;
+}
+
+.project-frame-title {
+    font-family: 'Poppins-regular';
+    font-size: 14px;
+    color: var(--text-light);
+    margin: 0 0 0 10px;
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-frame-close {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    flex-shrink: 0;
+}
+
+.project-frame-close:hover {
+    opacity: 1;
+}
+
+/* Переключатель для предпросмотра */
+.frame-toggle-container {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: var(--nav-dark);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.frame-toggle-label {
+    font-family: 'Poppins-regular';
+    font-size: 12px;
+    color: var(--text-gray);
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.frame-toggle {
+    display: flex;
+    background-color: var(--sidebar-dark);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.frame-toggle-btn {
+    padding: 6px 12px;
+    font-family: 'Poppins-regular';
+    font-size: 11px;
+    color: var(--text-gray);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.frame-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.frame-toggle-btn.active {
+    background-color: var(--terminal-teal);
+    color: var(--text-light);
+}
+
+/* ========== АДАПТАЦИЯ ПОД РАЗНЫЕ ТЕМЫ ========== */
+
+/* Белая тема */
+body[data-theme="white_color"] .project-level-item {
+    color: var(--text-dark);
+}
+
+body[data-theme="white_color"] .project-level-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+body[data-theme="white_color"] .level-arrow {
+    filter: brightness(0.3) invert(0);
+}
+
+body[data-theme="white_color"] .project-item-icon {
+    filter: brightness(0.3);
+}
+
+body[data-theme="white_color"] .project-item {
+    color: var(--text-gray);
+}
+
+body[data-theme="white_color"] .project-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--text-dark);
+}
+
+body[data-theme="white_color"] .project-item.active {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--ocean-teal) !important;
+}
+
+body[data-theme="white_color"] .project-item.active .project-item-icon {
+    filter: brightness(0.7) sepia(1) hue-rotate(180deg) saturate(2);
+}
+
+/* Темная тема Adonis */
+body[data-theme="dark_color"] .project-level-item {
+    color: var(--text-light);
+}
+
+body[data-theme="dark_color"] .project-level-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body[data-theme="dark_color"] .level-arrow {
+    filter: brightness(0.8) invert(0.7);
+}
+
+body[data-theme="dark_color"] .project-item-icon {
+    filter: brightness(0.8) invert(0.7);
+}
+
+body[data-theme="dark_color"] .project-item {
+    color: var(--text-gray);
+}
+
+body[data-theme="dark_color"] .project-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-light);
+}
+
+body[data-theme="dark_color"] .project-item.active {
+    background-color: rgba(88, 166, 255, 0.1);
+    color: var(--accent-blue) !important;
+}
+
+body[data-theme="dark_color"] .project-item.active .project-item-icon {
+    filter: brightness(0.9) sepia(1) hue-rotate(200deg) saturate(3);
+}
+
+/* Индикатор загрузки */
+.project-frame-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--border-light);
+    border-top-color: var(--terminal-teal);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ========== ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ========== */
+
+/* Плавная анимация для стрелки */
+.level-arrow {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Отступ для иконки файла в проектах */
+.project-item {
+    padding-left: 30px; /* Место для иконки */
+}
+
+/* Для адаптивности */
+@media (max-width: 768px) {
+    .project-level-item {
+        padding: 5px 0 5px 20px;
+        font-size: 12px;
+    }
+    
+    .project-item {
+        font-size: 10px !important;
+        padding: 3px 0 3px 20px;
+    }
+    
+    .project-item-icon {
+        width: 12px !important;
+        height: 12px !important;
+    }
+    
+    .projects-list {
+        margin-left: 20px;
+        max-height: 200px;
+    }
+    
+    .compact-mode .project-item {
+        min-height: 18px;
+        font-size: 9px !important;
+    }
+}
+
+/* Индикатор количества проектов */
+.level-header::after {
+    content: attr(data-count);
+    font-size: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-gray);
+    padding: 1px 6px;
+    border-radius: 10px;
+    margin-left: 8px;
+    font-weight: normal;
+}
+
+body[data-theme="white_color"] .level-header::after {
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--text-gray);
+}
+
+body[data-theme="dark_color"] .level-header::after {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+}
+
+
+/* Стили для основного меню (Обо мне, Достижения) */
+.left_nav_ul li[data-tab] {
+    position: relative;
+    padding: 6px 0 6px 30px;
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--text-light);
+    transition: background-color 0.2s ease;
+}
+
+.left_nav_ul li[data-tab]:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Убираем стандартные маркеры у элементов основного меню */
+.left_nav_ul li[data-tab]::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-image: url('../img/left_nav/arrow-right.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.left_nav_ul li[data-tab]:hover::before {
+    opacity: 0.8;
+}
+
+/* Адаптация для разных тем */
+body[data-theme="white_color"] .left_nav_ul li[data-tab] {
+    color: var(--text-dark);
+}
+
+body[data-theme="white_color"] .left_nav_ul li[data-tab]:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+body[data-theme="white_color"] .left_nav_ul li[data-tab]::before {
+    filter: brightness(0.3) invert(0);
+}
+
+body[data-theme="dark_color"] .left_nav_ul li[data-tab] {
+    color: var(--text-light);
+}
+
+body[data-theme="dark_color"] .left_nav_ul li[data-tab]:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body[data-theme="dark_color"] .left_nav_ul li[data-tab]::before {
+    filter: brightness(0.8) invert(0.7);
+}

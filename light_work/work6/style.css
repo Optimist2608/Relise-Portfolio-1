@@ -1,0 +1,118 @@
+@font-face {
+    font-family: "MPLUS-bold";
+    src:
+    url('/fonts/MPLUS1Code-Bold.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Bold.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "MPLUS-medium";
+    src:
+    url('/fonts/MPLUS1Code-Medium.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Medium.woff') format('woff'),
+    url('fonts/MPLUS1Code-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "MPLUS-regular";
+    src:
+    url('/fonts/MPLUS1Code-Regular.woff2') format('woff2'),
+    url('fonts/MPLUS1Code-Regular.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "MPLUS-thin";
+    src:
+    url('/fonts/MPLUS1Code-Thin.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Thin.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(243, 248, 252);
+}
+.page {
+    max-width: 1400px;
+    background-color: rgb(11, 114, 173);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 150px;
+}
+.buy {
+    font-family: 'MPLUS-bold';
+    font-size: 50px;
+    color: black;
+}
+.list {
+    font-family: 'MPLUS-regular';
+    background-color: lightgreen;
+    border: 2px solid black;
+    width: 500px;
+    padding: 20px;
+    font-size: 35px;
+    list-style-position: inside;
+    /* list-style-type: upper-alpha; */
+}
+.list li {
+    background-color: coral;
+    margin: 10px 0px;
+    padding: 10px;
+}
+.car {
+    font-family: 'MPLUS-regular';
+    background-color: rgb(243, 115, 215);
+    border: 2px solid black;
+    width: 300px;
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 35px;
+    list-style-position: inside;
+    list-style-type: none;
+    list-style-image: url(/img/car90_42507.png) ;
+}
+.car li {
+    background-color: rgb(155, 95, 75);
+    margin: 20px 0;
+    padding: 15px;
+}
+.car li::marker {
+    color: red;
+    vertical-align: middle ;
+}
+span {
+    background-color: green;
+    padding: 10px;
+}
+hr {
+    margin: 20px;
+}
+dt {
+    font-family: 'MPLUS-regular';
+    font-size: 34px;
+    text-transform: uppercase;
+    color: white;
+    background-color: olive;
+    padding: 10px 20px;
+}
+dd {
+    font-family: 'MPLUS-regular';
+    font-size: 34px;
+    background-color: green;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}

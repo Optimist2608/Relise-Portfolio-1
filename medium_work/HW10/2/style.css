@@ -1,0 +1,48 @@
+
+html {
+    font-family: 'MPLUS-regular';
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(223, 245, 255);
+    position: relative;
+}
+.love {
+    position: relative;
+    left: 600px;
+    top: 200px;
+}
+
+.love:hover {
+    animation: 5s l linear;
+}
+
+.love:hover .loveX {
+    animation: 5s color linear;
+}
+
+@keyframes l {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(2);
+    }
+}
+
+@keyframes color {
+    0% {
+        fill: #808080;
+        stroke: #000000;
+    }
+    100% {
+        fill: #FFB6C1;
+        stroke: #C71585;
+    }
+}

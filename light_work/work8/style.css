@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'MPLUS-bold';
+    src:
+    url('/fonts/MPLUS1Code-Bold.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Bold.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-medium';
+    src:
+    url('/fonts/MPLUS1Code-Medium.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Medium.woff') format('woff'),
+    url('fonts/MPLUS1Code-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-regular';
+    src:
+    url('/fonts/MPLUS1Code-Regular.woff2') format('woff2'),
+    url('fonts/MPLUS1Code-Regular.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-thin';
+    src:
+    url('/fonts/MPLUS1Code-Thin.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Thin.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    font-family: 'MPLUS-regular';
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(193, 227, 243);
+}
+.page {
+    max-width: 1400px;
+    background-color: rgb(141, 238, 162);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 150px;
+}
+.block {
+    height: 700px;
+    border: 2px solid black;
+    padding: 50px;
+    background-color: rgb(221, 55, 88);
+    /* background-image: url("/img/priroda_ozero_gory_166874_3840x2160.jpg"), url(/img/na-rab-stol-2.jpg); */
+    /* background-size: 500px, 100px; */
+    /* background-repeat: no-repeat, repeat-x; */
+    /* background-position: 500px; */
+    /* background-position: right 100px bottom 50px; */
+    /* background-position: left top, right bottom; */
+    /* background-size: auto; */
+    background: url(/img/priroda_ozero_gory_166874_3840x2160.jpg)
+    no-repeat center / 500px ,
+    url(/img/na-rab-stol-2.jpg) repeat-y center / 100px rgb(221, 55, 88);
+}
+hr{
+    margin: 20px 0px;
+}

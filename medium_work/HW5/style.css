@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'MPLUS-bold';
+    src:
+    url('/fonts/MPLUS1Code-Bold.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Bold.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-medium';
+    src:
+    url('/fonts/MPLUS1Code-Medium.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Medium.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-regular';
+    src:
+    url('/fonts/MPLUS1Code-Regular.woff2') format('woff2'),
+    url('fonts/MPLUS1Code-Regular.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-thin';
+    src:
+    url('/fonts/MPLUS1Code-Thin.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Thin.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    font-family: 'MPLUS-regular';
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(212, 212, 212);
+}
+.page {
+    max-width: 1400px;
+    background-color: rgb(212, 212, 212);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 150px;
+}
+/* ------------------------------------------------------------------------------------------------------- */
+nav {
+    background-color: rgb(0, 134, 34);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.menu {
+    list-style-type: none;
+    display: flex ;  
+    /* Без flex не получается */
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    display: inline-block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: rgb(1, 102, 26);
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(0, 77, 19);
+    width: 200px;
+    list-style-type: none;
+    z-index: 2;
+}
+
+.submenu .submenu {
+    top: 0;
+    left: 100%;
+}
+
+.menu li:hover > .submenu {
+    display: block;
+}
+
+.menu li:hover > a {
+    background-color: rgb(0, 43, 7);
+}
+
+.content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    line-height: 1.6;
+}

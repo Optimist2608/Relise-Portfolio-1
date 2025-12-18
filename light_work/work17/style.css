@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'MPLUS-bold';
+    src:
+    url('/fonts/MPLUS1Code-Bold.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Bold.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-medium';
+    src:
+    url('/fonts/MPLUS1Code-Medium.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Medium.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-regular';
+    src:
+    url('/fonts/MPLUS1Code-Regular.woff2') format('woff2'),
+    url('fonts/MPLUS1Code-Regular.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-thin';
+    src:
+    url('/fonts/MPLUS1Code-Thin.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Thin.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    font-family: 'MPLUS-regular';
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color: rgb(223, 245, 255);
+}
+.page {
+    max-width: 1400px;
+    background-color: rgb(211, 236, 216);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 150px;
+}
+.btn {
+    font-size: 20px;
+    padding: 10px 30px;
+    margin-bottom: 30px;
+}
+.block {
+    width: 200px;
+    height: 200px;
+    background-color: darkred;
+    padding: 20px;
+    /* transform: translate(1000px, 300px) */
+    transition: 5s;
+    /* transform-origin:300px 300px; */
+    transform: scale(1);
+}
+.text {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-top: 20px;
+}
+.btn:hover ~ .block {
+    /* transform: translate(1000px, 300px); */
+    /* transform: rotateZ(1060deg); */
+    /* transform: scale(0.5); */
+    /* transform:skew(30deg,30deg) ; */
+    transform: scale(-1,1);
+}

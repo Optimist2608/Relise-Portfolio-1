@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "play700";
+    src: local('PlayfairDisplay-Bold'),
+    url("/fonts/PlayfairDisplay-Bold.woff2") format('woff2'),
+    url('/fonts/PlayfairDisplay-Bold.woff') format('woff'),
+    url('fonts/PlayfairDisplay-Bold.ttf') format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "play500";
+    src: local('PlayfairDisplay-Medium'),
+    url("/fonts/PlayfairDisplay-Medium.woff2") format('woff2'),
+    url('/fonts/PlayfairDisplay-Medium.woff') format('woff'),
+    url('fonts/PlayfairDisplay-Medium.ttf') format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "play400";
+    src: local('PlayfairDisplay-Regular'),
+    url("/fonts/PlayfairDisplay-Regular.woff2") format('woff2'),
+    url('/fonts/PlayfairDisplay-Regular.woff') format('woff'),
+    url('fonts/PlayfairDisplay-Regular.ttf') format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html {
+    font-family: "play400";
+    font-size: 20px;
+}
+body{
+    background-color: rgb(126, 211, 250);
+}
+.page {
+    max-width: 1400px;
+    background-color: rgb(11, 173, 46);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 150px;
+}
+.t1 {
+    font-family: "play700";
+}
+.t2 {
+    font-family: "play500";
+}
+.t3 {
+    font-family: "play400";
+}
+hr {
+    margin: 20 0;
+}
+.title {
+    font-family: 'play700';
+    font-size: 60px;
+    text-transform: uppercase;
+    /* border: 1px solid black; */
+    text-align: right;
+    width: 900px;
+    /* text-shadow: 10px 10px 10px blue; */
+    margin-bottom: 80px;
+    /* text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-style: wavy; */
+    /* writing-mode: vertical-lr; */
+    
+}
+.text {
+    width: 500px;
+    text-align: justify;
+    margin-left: auto;
+    border: 1px solid black;
+    /* font-family: 'play400'; */
+    /* font-size: 20px; */
+    padding: 20px;
+    line-height: 0.8;
+    user-select: none;
+    word-spacing: 2px;
+    text-indent: 20px;
+}
+.big {
+    /* font-family: "play400"; */
+    text-align: justify;
+    line-height: 1.8;
+    columns: 2;
+    column-rule:3px solid red;
+    letter-spacing: 10px;
+}

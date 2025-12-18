@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'MPLUS-bold';
+    src:
+    url('/fonts/MPLUS1Code-Bold.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Bold.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-medium';
+    src:
+    url('/fonts/MPLUS1Code-Medium.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Medium.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-regular';
+    src:
+    url('/fonts/MPLUS1Code-Regular.woff2') format('woff2'),
+    url('fonts/MPLUS1Code-Regular.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-thin';
+    src:
+    url('/fonts/MPLUS1Code-Thin.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Thin.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    font-family: 'MPLUS-regular';
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.page {
+  max-width: 1400px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 40px 150px;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+/* ----------- head ------------------------------------------------- */
+.head {
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.wrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    background-color: rgb(83, 2, 79);
+    padding: 20px;
+    border-radius: 20px;
+}
+.link {
+    margin-right: 30px;
+    margin-left: 30px;
+    font-size: 22px;
+    text-decoration: none;
+    color: rgb(243, 227, 9);
+    font-family: 'MPLUS-medium';
+}
+.logo {
+    width: 80px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: grey;
+    /* margin-right: auto; */
+}
+hr {
+  width: 100%;
+}
+/* ----------- main ----------------------------------------------- */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+.new {
+  background-color: lightcoral;
+  width: 100%;
+  padding: 20px;
+  overflow: hidden;
+}
+.new__title {
+  color: blue;
+  font-family: 'MPLUS-medium';
+  font-style: italic;
+  margin-bottom: 40px;
+  
+}
+.block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  /* flex-wrap: wrap; */    
+}
+.card {
+  width: 300px;
+  background-color: darkkhaki;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.card__img {
+  width: 250px;
+  border: 1px solid black;
+}
+.card_content {
+    background-color: aqua;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    gap: 30px;
+    
+}
+.btn_all {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+button {
+    padding: 10px 30px;
+    background-color: green;
+}
+.about {
+  background-color: lightgreen;
+  padding: 20px;
+}

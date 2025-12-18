@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'MPLUS-bold';
+    src:
+    url('/fonts/MPLUS1Code-Bold.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Bold.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-medium';
+    src:
+    url('/fonts/MPLUS1Code-Medium.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Medium.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-regular';
+    src:
+    url('/fonts/MPLUS1Code-Regular.woff2') format('woff2'),
+    url('fonts/MPLUS1Code-Regular.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-thin';
+    src:
+    url('/fonts/MPLUS1Code-Thin.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Thin.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    font-family: 'MPLUS-regular';
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color: rgb(223, 245, 255);
+}
+.page {
+    max-width: 1400px;
+    background-color: rgb(211, 236, 216);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 150px;
+}
+hr {
+    margin: 20px 0px;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.link {
+    font-size: 34px;
+    text-decoration: none;
+    color: peru;
+    text-transform: uppercase;
+    font-family: 'MPLUS-bold';
+    position: relative;
+}
+.link::before {
+    content: "";
+    display: inline-block;
+    width: 59px;
+    height: 60px;
+    background-image: url("./img/icon2.png");
+    position: absolute;
+    top: -10px;
+    left: -65px;
+    transition: 0.5s;
+}
+.link:nth-child(2)::before {
+    background-position: -59px 0px ;
+}
+.link:nth-child(3)::before {
+    background-position: -118px 0px;
+}
+.link:nth-child(4)::before {
+    background-position: -177px 0px;
+}
+.link:nth-child(1):hover::before{
+    background-position: 0px 60px;
+}
+.link:nth-child(2):hover::before{
+    background-position: -59px 60px;
+}
+.link:nth-child(3):hover::before{
+    background-position: -118px 60px;
+}
+.link:nth-child(4):hover::before{
+    background-position: -177px 60px;
+}

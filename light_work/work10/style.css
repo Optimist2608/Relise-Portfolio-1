@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'MPLUS-bold';
+    src:
+    url('/fonts/MPLUS1Code-Bold.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Bold.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-medium';
+    src:
+    url('/fonts/MPLUS1Code-Medium.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Medium.woff') format('woff'),
+    url('fonts/MPLUS1Code-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-regular';
+    src:
+    url('/fonts/MPLUS1Code-Regular.woff2') format('woff2'),
+    url('fonts/MPLUS1Code-Regular.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MPLUS-thin';
+    src:
+    url('/fonts/MPLUS1Code-Thin.woff2') format('woff2'),
+    url('/fonts/MPLUS1Code-Thin.woff') format('woff'),
+    url('/fonts/MPLUS1Code-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    font-family: 'MPLUS-regular';
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(215, 233, 241);
+}
+.page {
+    max-width: 1400px;
+    background-color: rgb(201, 235, 208);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 150px;
+}
+.title {
+    margin-bottom: 40px;
+}
+.block {
+    width: 500px;
+    height: 700px;
+    border: 10px solid rgba(253, 0, 0, 0.651);
+    position: static;
+}
+.box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: rgba(240, 128, 128, 0.603);
+    padding: 30px;
+    font-size: 30px;
+    /* height: 1400px; */
+}
+.b1 {
+    /* background-color: olive;
+    position: sticky;
+    top: 50px; */
+    z-index: 100;
+    position: relative;
+}
+.b2 {
+    /* position: relative;
+    top: 50px;
+    left: 50px; */
+    /* position: absolute; */
+    /* position: fixed; */
+    /* bottom: 100px;
+    right: 100px;
+    background-color: darkcyan;
+    position: sticky;
+    top: 100px; */
+    position: relative;
+    top: -50px;
+    left: 50px;
+    z-index: 4;
+}
+.b3 {
+    /* position: sticky; */
+    position: relative;
+    top: -150px;
+    left: 150px;
+    z-index: 3;
+}

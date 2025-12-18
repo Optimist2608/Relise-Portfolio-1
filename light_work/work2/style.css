@@ -1,0 +1,30 @@
+body {
+    background-color: burlywood;
+    padding: 100px;
+}
+.title {
+    color: rgb(18, 190, 76);
+}
+.title_span {
+    color: darkorchid;
+}
+.box {
+    width: 270px;
+    height: 270px;
+    background-color: darkgreen;
+    border: 2px solid black;
+    padding: 20px 20px 20px 20px;
+    display: inline-block;
+}
+/* #b1 { 
+    margin: 20px 60px 100px 130px;
+    margin-bottom: 50px;
+} */
+.btn {
+    padding: 20px;
+}
+.text1 {
+    border: 2px solid black;
+    display: block;
+    text-align: justify;
+}

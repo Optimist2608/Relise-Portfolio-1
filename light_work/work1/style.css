@@ -1,0 +1,28 @@
+img {
+    border: 2px solid black;
+    width: 400px;
+    /* height: 400px; */
+}
+p{
+    font-size: 24px;
+    text-align: justify;
+}
+.about_text {
+    color: rgb(97, 33, 216);
+}
+.user_text{
+color: green;
+}
+.block {
+    border: 5px solid blue;
+    width: 500px;
+}
+.box {
+    border: 5px solid red;
+}
+.text_span{
+    color: red;
+}
+.button_span {
+    color: burlywood;
+}

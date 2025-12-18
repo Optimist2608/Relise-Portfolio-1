@@ -1,0 +1,33 @@
+
+html {
+    font-family: 'MPLUS-regular';
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color: rgb(223, 245, 255);
+}
+img {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.k {
+    top: 49px;
+    left: 50px;
+    transition: 3s;
+    animation: 3s k infinite linear;
+}
+@keyframes k {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    100% {
+        transform: translate(180px, 0px);
+    }
+}
